@@ -1,0 +1,11 @@
+@use "../abstracts/index" as *;
+
+.banner-heading {
+    @include typography($primary-darkblue80, rem(36px), 800, calc(54/36))
+}
+.banner-sub-heading {
+    @include typography($primary-darkblue80, rem(24px), 700, calc(46 / 24))
+}
+.banner-sub-text {
+    @include typography($neutral80, rem(12px), 500, calc(18 / 12))
+}
