@@ -1,0 +1,22 @@
+@use "../abstracts/index" as *;
+
+.primary-link-button {
+    display: inline-block;
+    color: $neutral00;
+    background-color: $primary-darkblue;
+    padding: 14px 28px;
+    border-radius: 9999px;
+}
+.secondary-link-button {
+    @include flex();
+    display: inline-flex;
+    color: $primary-darkblue;
+    border-radius: 9999px;
+    border: solid 1px $primary-darkblue;
+    padding: 14px 28px;
+
+    img {
+        width: px-to-rem(18px);
+        height: px-to-rem(18px);
+    }
+}

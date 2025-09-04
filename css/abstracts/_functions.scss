@@ -1,0 +1,5 @@
+@use "variables" as *;
+
+@function px-to-rem($pixel, $base-size: $base-font-size) {
+    @return ($pixel / $base-size) * 1rem;
+}

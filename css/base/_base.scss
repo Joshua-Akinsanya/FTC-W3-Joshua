@@ -1,5 +1,15 @@
 @use "../abstracts/index" as *;
 
 body {
-  background-color: $body-bgcolor;
+  background-color: $white;
+  font-family: 'Gilroy', 'Arial', 'sans serif';
+  font-size: 1rem;
+}
+
+.site-header {
+  background-image: url('../../assets/backgrounds/mobile-banner.svg');
+  background-size: cover;
+}
+.hide-on-mobile {
+  display: none;
 }
