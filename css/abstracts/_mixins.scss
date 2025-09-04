@@ -5,8 +5,11 @@
     align-items: $align;
 }
 
-@mixin grid() {
+@mixin grid($c-template: 1fr, $gap: 0) {
     display: grid;
+    grid-template-columns: $c-template;
+    gap: $gap;
+
 }
 
 @mixin typography($color: black, $size: 1rem, $weight: 400, $line: 1.5) {

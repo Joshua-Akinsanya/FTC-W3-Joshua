@@ -1,0 +1,17 @@
+@use "../abstracts/index" as *;
+
+.pet-card {
+    background-color: $neutral00;
+    .pet-img {
+        border-radius: 10px;
+    }
+}
+.pet-name {
+    @include typography($neutral100, rem(14px), 700, calc(20 / 14))
+}
+.card-info {
+    @include typography($neutral60, rem(12px), 500, calc(20 / 14))
+}
+.price {
+    @include typography($neutral100, rem(16px), 700, calc(24/16))
+}

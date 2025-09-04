@@ -34,6 +34,10 @@ button {
   border: none;
 }
 
+.hide-on-mobile {
+  display: none;
+}
+
 body {
   background-color: #fff;
   font-family: "Gilroy", "Arial", "sans serif";
@@ -43,10 +47,6 @@ body {
 .site-header {
   background-image: url("../../assets/backgrounds/mobile-banner.svg");
   background-size: cover;
-}
-
-.hide-on-mobile {
-  display: none;
 }
 
 @font-face {
@@ -103,6 +103,34 @@ body {
   height: 1.125rem;
 }
 
+.pet-card {
+  background-color: #FDFDFD;
+}
+.pet-card .pet-img {
+  border-radius: 10px;
+}
+
+.pet-name {
+  color: #00171F;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+}
+
+.card-info {
+  color: #667479;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4285714286;
+}
+
+.price {
+  color: #00171F;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
 .site-header {
   border-radius: 0 0 20px 20px;
 }
@@ -143,4 +171,24 @@ body {
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 1.5;
+}
+
+.section-title {
+  color: #000;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4285714286;
+}
+
+.section-heading {
+  color: #003459;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.pet-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }/*# sourceMappingURL=style.css.map */
