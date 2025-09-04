@@ -1,0 +1,42 @@
+@use "../abstracts/index" as *;
+
+.footer {
+    background: linear-gradient(102.87deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%);
+    border-radius: 20px 20px;
+}
+.newsletter-form {
+    background-color: $primary-darkblue;
+    border-radius: 16px;
+}
+.newsletter-form-heading {
+    @include typography($neutral00, rem(20px), 700, calc(32 / 20));
+}
+.newsletter-field-group {
+    background-color: $white;
+    border-radius: 14px;
+}
+
+.newsletter-email-field { //input type=email
+    @include typography($neutral40, rem(14px), 500, calc(20 / 14))
+}
+.newsletter-email-field:focus {
+    color: $neutral100;
+}
+
+.newsletter-submit-button {
+    background: $primary-darkblue;
+    @include typography($neutral00, 1rem, 500, calc(24 / 16));
+    border-radius: 8px;
+}
+
+.footer-link {
+    @include typography($neutral100, 1rem, 500, calc(24 / 16));
+}
+
+.policy-link {
+    @include typography($neutral60, rem(12px), 500, 1.5)
+}
+.copyright {
+    @include typography($neutral60, rem(10px), 400, 1.6);
+    text-align: center;
+}
