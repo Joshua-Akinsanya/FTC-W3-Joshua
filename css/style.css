@@ -131,6 +131,35 @@ body {
   line-height: 1.5;
 }
 
+.info-badge {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #FDFDFD;
+  font-size: 0.625rem;
+  font-weight: 700;
+  line-height: 1.6;
+  display: inline-flex;
+  background-color: #00A7E7;
+  padding: 0.125rem 0.625rem;
+  border-radius: 9999px;
+}
+
+.knowledge-title {
+  color: #00171F;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.knowledge-text {
+  color: #242B33;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.4285714286;
+}
+
 .site-header {
   border-radius: 0 0 20px 20px;
 }

@@ -1,0 +1,16 @@
+@use "../abstracts/index" as *;
+
+.info-badge {
+    @include flex();
+    @include typography($neutral00, rem(10px), 700, 1.6);
+    display: inline-flex;
+    background-color: $state-bluesea;
+    padding: rem(2px) rem(10px);
+    border-radius: 9999px;
+}
+.knowledge-title {
+    @include typography($neutral100, 1rem, 700, calc(24 / 16))
+}
+.knowledge-text {
+    @include typography($neutral80, rem(14px), 400, calc(20 / 14))
+}
