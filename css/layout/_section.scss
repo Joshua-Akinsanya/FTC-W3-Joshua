@@ -1,11 +1,13 @@
 @use "../abstracts/index" as *;
 
+.section {
+    margin-top: rem(40px);
+    margin-bottom: rem(40px);
+    padding: 1rem
+}
 .section-title {
     @include typography($black, rem(14px), 500, calc(20 / 14));
 }
 .section-heading {
     @include typography($primary-darkblue, rem(20px), 700, calc(32 / 20));
-}
-.pet-grid {
-    @include grid(repeat(2, 1fr), $gap: 10px);
 }

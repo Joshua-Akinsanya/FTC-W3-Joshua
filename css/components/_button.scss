@@ -1,22 +1,29 @@
 @use "../abstracts/index" as *;
 
 .primary-link-button {
-    display: inline-block;
+    @include flex();
     color: $neutral00;
     background-color: $primary-darkblue;
-    padding: 14px 28px;
+    padding: 0 rem(28px);
+    height: 100%;
     border-radius: 9999px;
 }
 .secondary-link-button {
-    @include flex();
-    display: inline-flex;
+    @include flex($gap: rem(8px));
     color: $primary-darkblue;
     border-radius: 9999px;
     border: solid 1px $primary-darkblue;
-    padding: 14px 28px;
+    padding: 0 rem(28px);
+    height: 3em;
+    // height: 100%;
 
     img {
         width: rem(18px);
         height: rem(18px);
     }
+}
+.button-container {
+    @include flex(row, space-between, $gap: rem(16px));
+    flex: 1;
+    height: 3em; // 3 times the font size of the buttons
 }

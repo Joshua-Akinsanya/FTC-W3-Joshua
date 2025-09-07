@@ -1,5 +1,8 @@
-@mixin flex($direction: row, $justify: center, $align: center) {
+@use "sass:map";
+
+@mixin flex($direction: row, $justify: center, $align: center, $gap: 0) {
     display: flex;
+    gap: $gap;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
@@ -22,4 +25,20 @@
 @mixin link-button() {
     @include flex();
     border-radius: 9999px;
+}
+
+@mixin container($name, $type: inline-size) {
+    container-name: $name;
+    container-type: $type;
+}
+
+@mixin responsive($breakpoint) {
+    $breakpoint-value: map.get($breakpoints-map, $breakpoint);
+    @if $breakpoint-value {
+        @media (min-width: $breakpoint-value) {
+            @content;
+        }
+    } @else {
+        @warn "No value found for breakpoint `#{$breakpoint}` in $breakpoints-map map.";
+    }
 }

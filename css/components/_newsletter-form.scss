@@ -1,0 +1,38 @@
+@use "../abstracts/index" as *;
+
+.newsletter-form {
+    @include grid($gap: rem(16px));
+    background-color: $primary-darkblue;
+    border-radius: 16px;
+    padding: rem(16px);
+}
+.newsletter-form-heading {
+    @include typography($neutral00, rem(20px), 700, calc(32 / 20));
+}
+.newsletter-field-group {
+    @include grid($gap:12px);
+    background-color: $white;
+    border-radius: 14px;
+    padding: rem(12px);
+}
+
+// Not a real element
+form-elements {
+    border-radius: 8px;
+    padding: rem(14px) rem(28px);
+    height: 3rem;
+}
+.newsletter-email-field { //input type=email
+    @include typography($neutral40, rem(14px), 500, calc(20 / 14));
+    border: solid 1px $neutral40;
+    @extend form-elements;
+}
+.newsletter-email-field:focus {
+    color: $neutral100;
+}
+
+.newsletter-submit-button {
+    background: $primary-darkblue;
+    @include typography($neutral00, 1rem, 500, calc(24 / 16));
+    @extend form-elements;
+}

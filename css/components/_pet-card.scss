@@ -1,7 +1,11 @@
 @use "../abstracts/index" as *;
 
 .pet-card {
+    padding: rem(8px);
     background-color: $neutral00;
+    border-radius: 12px;
+    box-shadow: 0px 4px 28px -2px $box-shadow;
+    @include grid($gap: rem(8px));
     .pet-img {
         border-radius: 10px;
     }

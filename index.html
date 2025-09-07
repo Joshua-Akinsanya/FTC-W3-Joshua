@@ -9,7 +9,7 @@
 <body>
     <header class="site-header">
         <div class="site-bar">
-            <button id="open-sidebar-button" class="nav-button">
+            <button id="open-sidebar-button" class="nav-button" type="button">
                 <!--Hamburger Icon-->
                 <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.6665 23.1667H25.3332M6.6665 16.5H25.3332M6.6665 9.83334H25.3332" stroke="#00171F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -24,7 +24,7 @@
             </nav>
             <search>
                 <label for="search">
-                    <button id="search-button" class="nav-button">
+                    <button id="search-button" class="nav-button" type="button">
                         <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22.6771 21.061L18.4131 16.8283C20.0682 14.763 20.8698 12.1416 20.6529 9.5031C20.436 6.86457 19.2172 4.40946 17.2471 2.64261C15.277 0.875762 12.7054 -0.0685392 10.0609 0.00387725C7.41647 0.0762937 4.90025 1.15992 3.02965 3.03195C1.15904 4.90398 0.0762357 7.42211 0.0038743 10.0686C-0.0684871 12.715 0.875097 15.2886 2.64061 17.2602C4.40612 19.2318 6.85935 20.4515 9.49588 20.6686C12.1324 20.8856 14.7518 20.0835 16.8155 18.4271L21.045 22.6598C21.1519 22.7676 21.279 22.8531 21.419 22.9115C21.5591 22.9699 21.7093 23 21.861 23C22.0128 23 22.163 22.9699 22.303 22.9115C22.4431 22.8531 22.5702 22.7676 22.6771 22.6598C22.8842 22.4453 23 22.1587 23 21.8604C23 21.5621 22.8842 21.2755 22.6771 21.061ZM10.3679 18.4271C8.77668 18.4271 7.22122 17.9549 5.89819 17.0702C4.57516 16.1855 3.54398 14.928 2.93506 13.4569C2.32614 11.9857 2.16681 10.3668 2.47724 8.80501C2.78767 7.24321 3.5539 5.8086 4.67904 4.6826C5.80419 3.5566 7.23771 2.78979 8.79833 2.47912C10.3589 2.16846 11.9766 2.3279 13.4466 2.93729C14.9167 3.54668 16.1732 4.57864 17.0572 5.90267C17.9412 7.2267 18.4131 8.78335 18.4131 10.3757C18.4131 12.5111 17.5655 14.559 16.0567 16.0689C14.5479 17.5788 12.5016 18.4271 10.3679 18.4271Z" fill="#00171F"/>
                         </svg>
@@ -35,16 +35,18 @@
             <a href="" class="hide-on-mobile">Join the community</a>
         </div>
 
-        <section id="hero-section" class="section">
-            <h1 class="site-heading">One more Friend</h1>
+        <section id="hero-section" class="section hero-section">
+            <h1 class="site-heading">One More Friend</h1>
             <h2 class="site-sub-heading">Thousands more fun!</h2>
             <p class="site-sub-text">Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!</p>
-            <a href="" class="secondary-link-button">View Intro
-                <!--Play Video Icon-->
-                <img src="assets/icons/play-circle.png" alt="">
-            </a>
-            <a href="" class="primary-link-button">Explore Now</a>
-            <img src="assets/images/group-portrait-adorable-puppies 1.png" alt="Portrait of adorable puppies">
+            <div class="button-container">
+                <a href="" class="secondary-link-button">View Intro
+                    <!--Play Video Icon-->
+                    <img src="assets/icons/play-circle.png" alt="">
+                </a>
+                <a href="" class="primary-link-button">Explore Now</a>
+            </div>
+            <img src="assets/images/group-portrait-adorable-puppies.png" alt="Portrait of adorable puppies">
         </section>
     </header>
 
@@ -136,15 +138,20 @@
             <h2 class="banner-heading">One more friend</h2>
             <h3 class="banner-sub-heading">Thousands more fun!</h3>
             <p class="banner-sub-text">Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!</p>
-            <a href="" class="secondary-link-button">View Intro</a>
-            <a href="" class="primary-link-button">Explore Now</a>
+            <div class="button-container">
+                <a href="" class="secondary-link-button">View Intro
+                    <!--Play Video Icon-->
+                    <img src="assets/icons/play-circle.png" alt="">
+                </a>
+                <a href="" class="primary-link-button">Explore Now</a>
+            </div>
             <img src="assets/images/girl-kissing-puppy.png" alt="Girl kissing puppy">
         </section>
 
         <section id="do-you-know" class="section">
             <h2 class="section-title">You already know ?</h2>
             <h3 class="section-heading">Useful pet knowledge</h3>
-            <article id="pet-knowledge">
+            <article id="pet-knowledge" class="pet-knowledge">
                 <div class="knowledge">
                     <img src="assets/images/pet-knowledge-1.png" alt="Pomeranian dog" class="knowledge-img">
                     <p class="info-badge">Pet knowledge</p>
@@ -177,22 +184,26 @@
             </div>
         </form>
 
-        <a href="" class="footer-link">Home</a>
-        <a href="" class="footer-link">Category</a>
-        <a href="" class="footer-link">About</a>
-        <a href="" class="footer-link">Contact</a>
-
-        <div class="social">
-            <a href=""><img src="assets/social/Facebook - Negative.svg" alt=""></a>
-            <a href=""><img src="assets/social/Twitter - Negative.svg" alt=""></a>
-            <a href=""><img src="assets/social/Instagram - Negative.svg" alt=""></a>
-            <a href=""><img src="assets/social/YouTube - Negative.svg" alt=""></a>
+        <div class="footer-link-container">
+            <a href="" class="footer-link">Home</a>
+            <a href="" class="footer-link">Category</a>
+            <a href="" class="footer-link">About</a>
+            <a href="" class="footer-link">Contact</a>
         </div>
 
-        <img src="assets/logo/monito-logo-and-motto.svg" alt="Monito Logo - Pets for Best">
+        <div class="social-media-container">
+            <a href="" class="social-link"><img src="assets/social/Facebook - Negative.svg" alt="Facebook Icon" class="social-icon"></a>
+            <a href="" class="social-link"><img src="assets/social/Twitter - Negative.svg" alt="Twitter Icon" class="social-icon"></a>
+            <a href="" class="social-link"><img src="assets/social/Instagram - Negative.svg" alt="Instagram Icon" class="social-icon"></a>
+            <a href="" class="social-link"><img src="assets/social/YouTube - Negative.svg" alt="YouTube Icon" class="social-icon"></a>
+        </div>
 
-        <a href="" class="policy-link">Terms of Service</a>
-        <a href="" class="policy-link">Privacy Policy</a>
+        <img src="assets/logo/monito-logo-and-motto.svg" alt="Monito Logo - Pets for Best" class="logo">
+
+        <div class="policy-link-container">
+            <a href="" class="policy-link">Terms of Service</a>
+            <a href="" class="policy-link">Privacy Policy</a>
+        </div>
         <p class="copyright">© 2022 Monito. All rights reserved.</p>
     </footer>
 </body>

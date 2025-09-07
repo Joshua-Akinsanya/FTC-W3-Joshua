@@ -2,8 +2,8 @@
 
 .info-badge {
     @include flex();
-    @include typography($neutral00, rem(10px), 700, 1.6);
-    display: inline-flex;
+    @include typography($neutral00, rem(10px), 700);
+    max-width: max-content;
     background-color: $state-bluesea;
     padding: rem(2px) rem(10px);
     border-radius: 9999px;

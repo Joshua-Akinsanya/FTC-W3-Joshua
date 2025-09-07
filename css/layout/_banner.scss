@@ -1,5 +1,12 @@
 @use "../abstracts/index" as *;
 
+.banner-section {
+    background-image: url('../../assets/backgrounds/mobile-banner-3.svg');
+    background-size: cover;
+    border-radius: 20px;
+    margin-inline: rem(16px); // side margins
+    padding: rem(32px) rem(21px) 0 rem(21px);
+}
 .banner-heading {
     @include typography($primary-darkblue80, rem(36px), 800, calc(54/36))
 }
@@ -7,5 +14,6 @@
     @include typography($primary-darkblue80, rem(24px), 700, calc(46 / 24))
 }
 .banner-sub-text {
-    @include typography($neutral80, rem(12px), 500, calc(18 / 12))
+    @include typography($neutral80, rem(12px), 500, calc(18 / 12));
+    margin-bottom: rem(32px);
 }

@@ -1,4 +1,5 @@
 @use "../abstracts/index" as *;
+@use "../base/typography" as *;
 
 .hide-on-mobile {
   display: none;
@@ -6,7 +7,7 @@
 
 body {
   background-color: $white;
-  font-family: 'Gilroy', 'Arial', 'sans serif';
+  font-family: 'Gilroy';
   font-size: 1rem;
 }
 
