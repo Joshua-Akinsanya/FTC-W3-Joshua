@@ -4,8 +4,7 @@
     @include flex();
     color: $neutral00;
     background-color: $primary-darkblue;
-    padding: 0 rem(28px);
-    height: 100%;
+    padding: 1em rem(28px);
     border-radius: 9999px;
 }
 .secondary-link-button {
@@ -13,8 +12,7 @@
     color: $primary-darkblue;
     border-radius: 9999px;
     border: solid 1px $primary-darkblue;
-    padding: 0 rem(28px);
-    height: 3em;
+    padding: 1em rem(28px);
     // height: 100%;
 
     img {

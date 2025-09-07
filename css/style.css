@@ -107,8 +107,7 @@ body {
   align-items: center;
   color: #FDFDFD;
   background-color: #003459;
-  padding: 0 1.75rem;
-  height: 100%;
+  padding: 1em 1.75rem;
   border-radius: 9999px;
 }
 
@@ -121,8 +120,7 @@ body {
   color: #003459;
   border-radius: 9999px;
   border: solid 1px #003459;
-  padding: 0 1.75rem;
-  height: 3em;
+  padding: 1em 1.75rem;
 }
 .secondary-link-button img {
   width: 1.125rem;
