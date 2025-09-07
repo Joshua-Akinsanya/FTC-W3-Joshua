@@ -137,6 +137,37 @@ body {
   height: 3em;
 }
 
+.search-bar {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+@media (min-width: 1024px) {
+  .search-bar {
+    height: auto;
+    padding: 1em;
+    background-color: #FDFDFD;
+    border: none;
+    border-radius: 9999px;
+  }
+  .search-bar .search-input {
+    display: block;
+    border: none;
+    border: 9999px;
+    color: #99A2A5;
+  }
+  .search-bar .search-input:focus {
+    color: #00171F;
+  }
+}
+
+.search-label {
+  height: 100%;
+}
+
 .pet-card {
   padding: 0.5rem;
   background-color: #FDFDFD;
@@ -145,6 +176,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.5rem;
+  grid-auto-flow: row;
 }
 .pet-card .pet-img {
   border-radius: 10px;
@@ -206,6 +238,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+  grid-auto-flow: row;
   background-color: #003459;
   border-radius: 16px;
   padding: 1rem;
@@ -222,6 +255,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
+  grid-auto-flow: row;
   background-color: #fff;
   border-radius: 14px;
   padding: 0.75rem;
@@ -373,7 +407,6 @@ hero section since it has class section.
 @media (min-width: 768px) {
   .site-bar {
     height: 4.75rem;
-    padding-inline: 40px;
   }
 }
 @media (min-width: 1024px) {
@@ -402,18 +435,20 @@ hero section since it has class section.
 
 .nav-button {
   height: 100%;
+  padding-inline: 1em;
 }
-
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
 @media (min-width: 1024px) {
-  .search-input {
-    display: inline-block;
-    border: none;
-    border-radius: 9999px;
-    color: #99A2A5;
+  .nav-button {
+    padding-inline: 0;
   }
-  .search-input:focus {
-    border: 0px;
-    color: #00171F;
+  .nav-button svg {
+    width: 1.25rem;
+  }
+  .nav-button svg path {
+    fill: #99A2A5;
   }
 }
 
@@ -421,6 +456,7 @@ hero section since it has class section.
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+  grid-auto-flow: row;
   margin-top: 1.25rem;
   margin-bottom: 1rem;
 }
@@ -469,6 +505,7 @@ hero section since it has class section.
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.75rem;
+  grid-auto-flow: row;
   margin-bottom: 0.75rem;
 }
 
@@ -476,6 +513,7 @@ hero section since it has class section.
   display: grid;
   grid-template-columns: 1fr;
   gap: 8px;
+  grid-auto-flow: row;
   border-radius: 12px;
   padding: 0.5rem;
   background-color: #fff;

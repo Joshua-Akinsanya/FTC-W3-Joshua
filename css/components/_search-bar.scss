@@ -1,0 +1,29 @@
+@use "../abstracts/index" as *;
+
+.search-bar {
+    @include flex($gap: 1rem);
+    height: 100%;
+
+    @include responsive(desktop) {
+        height: auto;
+        padding: 1em;
+        background-color: $neutral00;
+        border: none;
+        border-radius: 9999px;
+
+        .search-input {
+            display: block;
+            border: none;
+            border: 9999px;
+            color: $neutral40;
+
+            &:focus {
+                color: $neutral100;
+            }
+        }
+    }
+}
+
+.search-label {
+    height: 100%;
+}
