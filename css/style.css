@@ -254,9 +254,20 @@ form-elements, .newsletter-submit-button, .newsletter-email-field {
 hero section since it has class section.
 */
 .section {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  padding: 1rem;
+  margin: 2.5rem 0;
+  padding: 0 1rem 1rem 1rem;
+}
+@media (min-width: 768px) {
+  .section {
+    margin: 3.125rem 0;
+    padding-inline: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .section {
+    margin: 3.75rem 0;
+    padding-inline: 130px;
+  }
 }
 
 .section-title {
@@ -265,12 +276,22 @@ hero section since it has class section.
   font-weight: 500;
   line-height: 1.4285714286;
 }
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 1rem;
+  }
+}
 
 .section-heading {
   color: #003459;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.6;
+}
+@media (min-width: 768px) {
+  .section-heading {
+    font-size: 1.5rem;
+  }
 }
 
 .site-header {
@@ -288,6 +309,11 @@ hero section since it has class section.
 }
 .site-bar .logo {
   height: 2rem;
+}
+@media (min-width: 992px) {
+  .site-bar {
+    padding-inline: 130px;
+  }
 }
 
 .nav-button {
@@ -341,8 +367,18 @@ hero section since it has class section.
   background-image: url("../../assets/backgrounds/mobile-banner-3.svg");
   background-size: cover;
   border-radius: 20px;
-  margin-inline: 1rem;
   padding: 2rem 1.3125rem 0 1.3125rem;
+  margin-inline: 1rem;
+}
+@media (min-width: 768px) {
+  .banner-section {
+    margin-inline: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .banner-section {
+    margin-inline: 130px;
+  }
 }
 
 .banner-heading {
@@ -395,6 +431,16 @@ hero section since it has class section.
 }
 .footer .logo {
   margin: 2.25rem auto 2.625rem auto;
+}
+@media (min-width: 768px) {
+  .footer {
+    padding-inline: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .footer {
+    padding-inline: 130px;
+  }
 }
 
 .footer-link-container {
@@ -454,4 +500,18 @@ hero section since it has class section.
   font-weight: 400;
   line-height: 1.6;
   text-align: center;
+}
+
+/* Side margins is imported last to prevent responsive styles from getting
+    overridden
+*/
+@media (min-width: 768px) {
+  .section {
+    padding-inline: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .section {
+    padding-inline: 130px;
+  }
 }/*# sourceMappingURL=style.css.map */

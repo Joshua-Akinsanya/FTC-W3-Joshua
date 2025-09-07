@@ -11,6 +11,10 @@
     .logo {
         height: rem(32px);
     }
+    
+    @include responsive(desktop) {
+        padding-inline: $side-margins-desktop;
+    }
 }
 
 .nav-button {
