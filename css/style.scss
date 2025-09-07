@@ -14,11 +14,8 @@ hero section since it has class section.
 
 @use "layout/section";
 @use "layout/header";
+@use "layout/site-bar";
 @use "layout/whats-new";
 @use "layout/banner";
 @use "layout/pet-knowledge";
 @use "layout/footer";
-/* Side margins is imported last to prevent responsive styles from getting
-    overridden
-*/
-@use "layout/page-side-margins";

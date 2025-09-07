@@ -4,23 +4,6 @@
     border-radius: 0 0 20px 20px;
 }
 
-.site-bar {
-    @include flex(row, $justify: space-between);
-    width: 100%;
-    height: rem(57px);
-    .logo {
-        height: rem(32px);
-    }
-    
-    @include responsive(desktop) {
-        padding-inline: $side-margins-desktop;
-    }
-}
-
-.nav-button {
-    height: 100%;
-}
-
 .site-heading {
     font-weight: 800;
     @include typography($primary-darkblue80, rem(46px), 800, 1.3);

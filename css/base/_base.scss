@@ -1,17 +1,24 @@
 @use "../abstracts/index" as *;
 @use "../base/typography" as *;
+@use "sass:map";
 
 .hide-on-mobile {
-  display: none;
+    display: none;
 }
 
 body {
-  background-color: $white;
-  font-family: 'Gilroy';
-  font-size: 1rem;
+    background-color: $white;
+    font-family: 'Gilroy';
+    font-size: 1rem;
 }
 
 .site-header {
-  background-image: url('../../assets/backgrounds/mobile-banner.svg');
-  background-size: cover;
+    background-image: url('../../assets/backgrounds/mobile-banner.svg');
+    background-size: cover;
+}
+
+@media (min-width: map.get($breakpoints-map, desktop)) {
+    .hide-on-desktop {
+        display: none;
+    }
 }

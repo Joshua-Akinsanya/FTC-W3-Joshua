@@ -9,20 +9,21 @@
 <body>
     <header class="site-header">
         <div class="site-bar">
-            <button id="open-sidebar-button" class="nav-button" type="button">
+            <button id="open-sidebar-button" class="nav-button hide-on-desktop" type="button">
                 <!--Hamburger Icon-->
                 <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.6665 23.1667H25.3332M6.6665 16.5H25.3332M6.6665 9.83334H25.3332" stroke="#00171F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </button>
             <img src="assets/logo/monito-logo-and-motto.svg" alt="Monito Logo - Pets for Best" class="logo">
-            <nav class="hide-on-mobile">
-                <a href="">Home</a>
-                <a href="">Category</a>
-                <a href="">About</a>
-                <a href="">Contact</a>
+            <nav class="nav hide-on-mobile">
+                <a href="" class="nav-link">Home</a>
+                <a href="" class="nav-link">Category</a>
+                <a href="" class="nav-link">About</a>
+                <a href="" class="nav-link">Contact</a>
             </nav>
             <search>
+                <input type="text" id="search" class="search-input hide-on-mobile" placeholder="Search something here">
                 <label for="search">
                     <button id="search-button" class="nav-button" type="button">
                         <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,9 +31,8 @@
                         </svg>
                     </button>
                 </label>
-                <input type="text" id="search" class="hide-on-mobile">
             </search>
-            <a href="" class="hide-on-mobile">Join the community</a>
+            <a href="" class="primary-link-button hide-on-mobile">Join the community</a>
         </div>
 
         <section id="hero-section" class="section hero-section">

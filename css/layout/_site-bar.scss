@@ -1,0 +1,57 @@
+@use "../abstracts/index" as *;
+
+.site-bar {
+    @include flex(row, $justify: space-between);
+    width: 100%;
+    height: rem(57px);
+    
+    .logo {
+        height: rem(32px);
+        @include responsive(tablet) { height: rem(36px) }
+        @include responsive(desktop) { height: rem(40px) }
+    }
+
+    .primary-link-button.hide-on-mobile {
+        display: none;
+        @include responsive(desktop) {
+            @include flex();
+        }
+    }
+
+    @include responsive(tablet) {
+        height: rem(76px);
+        padding-inline: $side-margins-tablet;
+    }
+    @include responsive(desktop) {
+        height: rem(100px);
+        padding-inline: $side-margins-desktop;
+    }
+}
+
+.nav.hide-on-mobile {
+    @include responsive(desktop) {
+        @include flex($justify: space-between, $gap: 0.5em);
+    }
+}
+
+.nav-link {
+    @include typography($primary-darkblue, 1rem, 700)
+}
+
+.nav-button {
+    height: 100%;
+}
+
+.search-input {
+    @include responsive(desktop) {
+        display: inline-block;
+        border: none;
+        border-radius: 9999px;
+        color: $neutral40;
+
+        &:focus {
+            border: 0px;
+            color: $neutral100;
+        }
+    }
+}
