@@ -269,7 +269,7 @@ hero section since it has class section.
 @media (min-width: 1024px) {
   .section {
     margin: 3.75rem 0;
-    padding-inline: 130px;
+    padding-inline: min(10vw, 130px);
   }
 }
 
@@ -379,7 +379,7 @@ hero section since it has class section.
 @media (min-width: 1024px) {
   .site-bar {
     height: 6.25rem;
-    padding-inline: 130px;
+    padding-inline: min(10vw, 130px);
   }
 }
 
@@ -439,7 +439,7 @@ hero section since it has class section.
 }
 @media (min-width: 1024px) {
   .banner-section {
-    margin-inline: 130px;
+    margin-inline: min(10vw, 130px);
   }
 }
 
@@ -501,7 +501,7 @@ hero section since it has class section.
 }
 @media (min-width: 1024px) {
   .footer {
-    padding-inline: 130px;
+    padding-inline: min(10vw, 130px);
   }
 }
 

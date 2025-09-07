@@ -19,7 +19,7 @@ $box-shadow: #00000014;
 $base-font-size: 16px;
 
 $side-margins-tablet: 40px;
-$side-margins-desktop: 130px;
+$side-margins-desktop: min(10vw, 130px);
 
 $breakpoints-map: (
     tablet:768px,
