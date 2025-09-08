@@ -1,0 +1,11 @@
+@use "../abstracts/index" as *;
+
+.main-content {
+    padding-inline: $side-margins-phone;
+    @include responsive(tablet) {
+        padding-inline: $side-margins-tablet;
+    }
+    @include responsive(desktop) {
+        padding-inline: $side-margins-desktop;
+    }
+}

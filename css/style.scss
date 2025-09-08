@@ -4,16 +4,22 @@
 
 @use "components/icon";
 @use "components/button";
-@use "components/pet-card";
+@use "components/search-bar";
+@use "components/card";
 @use "components/pet-knowledge-card";
 @use "components/newsletter-form";
 
 /* Section was placed above header to prevent it from overriding styles in
 hero section since it has class section.
 */
+
+@use "layout/main";
 @use "layout/section";
 @use "layout/header";
-@use "layout/whats-new";
+@use "layout/site-bar";
+@use "layout/grid";
 @use "layout/banner";
+@use "layout/products";
+@use "layout/partners";
 @use "layout/pet-knowledge";
 @use "layout/footer";

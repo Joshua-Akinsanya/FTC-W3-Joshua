@@ -3,9 +3,15 @@
 .footer {
     background: linear-gradient(102.87deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%);
     border-radius: 20px 20px 0 0;
-    padding: rem(40px) rem(16px) rem(20px) rem(16px);
+    padding: rem(40px) rem($side-margins-phone) rem(20px) rem($side-margins-phone);
     .logo {
         margin: rem(36px) auto rem(42px) auto;
+    }
+    @include responsive(tablet) {
+        padding-inline: $side-margins-tablet;
+    }
+    @include responsive(desktop) {
+        padding-inline: $side-margins-desktop;
     }
 }
 .footer-link-container {
@@ -38,10 +44,18 @@
     margin-bottom: rem(8px);
 }
 .policy-link {
-    @include typography($neutral60, rem(12px), 500, 1.5)
+    @include typography($neutral60, rem(12px), 500, 1.5);
+    @include responsive(tablet) {
+        font-size: rem(14px);
+        line-height: calc(20 / 14);
+    }
 }
 
 .copyright {
     @include typography($neutral60, rem(10px), 400, 1.6);
     text-align: center;
+    @include responsive(tablet) {
+        font-size: rem(14px);
+        line-height: calc(20 / 14);
+    }
 }

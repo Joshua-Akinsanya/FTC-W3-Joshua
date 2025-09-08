@@ -10,6 +10,8 @@ $neutral100: #00171F;
 $primary-darkblue: #003459;
 $primary-darkblue80: #002A48;
 
+$secondary-monyellow40: #FCEED5;
+
 $state-bluesea: #00A7E7;
 
 $black: #000;
@@ -18,7 +20,12 @@ $box-shadow: #00000014;
 
 $base-font-size: 16px;
 
+$side-margins-phone: 16px;
+$side-margins-tablet: 40px;
+$side-margins-desktop: min(10vw, 130px);
+
 $breakpoints-map: (
     tablet:768px,
-    desktop: 992px
+    desktop: 1024px,
+    qhd: 2560px // 1440p and above
 );

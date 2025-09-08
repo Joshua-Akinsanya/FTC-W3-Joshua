@@ -1,0 +1,52 @@
+@use "../abstracts/index" as *;
+
+.card {
+    padding: rem(8px);
+    background-color: $neutral00;
+    border-radius: 12px;
+    box-shadow: 0px 4px 28px -2px $box-shadow;
+    @include grid($gap: rem(8px));
+}
+.card-img {
+    width: 100%;
+    border-radius: 10px;
+}
+.card-name {
+    @include typography($neutral100, rem(14px), 700, calc(20 / 14));
+    @include responsive(desktop) {
+        font-size: rem(16px);
+        line-height: calc(24 / 16);
+    }
+}
+.card-info {
+    @include grid();
+    @include typography($neutral60, rem(12px), 500, calc(20 / 14));
+    
+    .detail {
+        display: inline-block;
+    }
+
+    @include responsive(tablet) {
+        @include flex($justify: flex-start, $gap: em(12px, 12px))
+    }
+}
+.dot-separator {
+    display: none;
+    @include responsive(tablet) {
+        display: block
+    }
+}
+.price {
+    @include typography($neutral100, rem(16px), 700, calc(24/16));
+    @include responsive(desktop) {
+        font-size: rem(14px);
+        line-height: calc(20 / 14);
+    }
+}
+.card-sticker {
+    @include flex($justify: flex-start, $gap: rem(8px));
+    @include typography($primary-darkblue80, rem(14px), 700, calc(20 / 14));
+    background-color: $secondary-monyellow40;
+    border-radius: 8px;
+    padding: rem(6px) rem(10px);
+}

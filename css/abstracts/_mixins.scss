@@ -1,3 +1,4 @@
+@use "variables.scss" as *;
 @use "sass:map";
 
 @mixin flex($direction: row, $justify: center, $align: center, $gap: 0) {
@@ -8,11 +9,11 @@
     align-items: $align;
 }
 
-@mixin grid($c-template: 1fr, $gap: 0) {
+@mixin grid($c-template: 1fr, $gap: 0, $auto-flow: row) {
     display: grid;
     grid-template-columns: $c-template;
     gap: $gap;
-
+    grid-auto-flow: $auto-flow;
 }
 
 @mixin typography($color: black, $size: 1rem, $weight: 400, $line: 1.5) {

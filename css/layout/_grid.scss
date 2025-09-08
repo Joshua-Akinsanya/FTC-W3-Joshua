@@ -1,6 +1,6 @@
 @use "../abstracts/index" as *;
 
-.pet-grid {
+.grid {
     @include grid(repeat(2, 1fr), $gap: 10px);
     margin-top: rem(20px);
     margin-bottom: rem(16px);
