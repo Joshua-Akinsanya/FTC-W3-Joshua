@@ -1,16 +1,17 @@
 @use "../abstracts/index" as *;
 
-.pet-card {
+.card {
     padding: rem(8px);
     background-color: $neutral00;
     border-radius: 12px;
     box-shadow: 0px 4px 28px -2px $box-shadow;
     @include grid($gap: rem(8px));
-    .pet-img {
-        border-radius: 10px;
-    }
 }
-.pet-name {
+.card-img {
+    width: 100%;
+    border-radius: 10px;
+}
+.card-name {
     @include typography($neutral100, rem(14px), 700, calc(20 / 14));
     @include responsive(desktop) {
         font-size: rem(16px);

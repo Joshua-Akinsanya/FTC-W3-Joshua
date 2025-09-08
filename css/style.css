@@ -184,7 +184,7 @@ body {
   height: 100%;
 }
 
-.pet-card {
+.card {
   padding: 0.5rem;
   background-color: #FDFDFD;
   border-radius: 12px;
@@ -194,18 +194,20 @@ body {
   gap: 0.5rem;
   grid-auto-flow: row;
 }
-.pet-card .pet-img {
+
+.card-img {
+  width: 100%;
   border-radius: 10px;
 }
 
-.pet-name {
+.card-name {
   color: #00171F;
   font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.4285714286;
 }
 @media (min-width: 1024px) {
-  .pet-name {
+  .card-name {
     font-size: 1rem;
     line-height: 1.5;
   }
@@ -229,6 +231,17 @@ body {
     font-size: 0.875rem;
     line-height: 1.4285714286;
   }
+}
+
+.knowledge {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  grid-auto-flow: row;
+  border-radius: 12px;
+  padding: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.0784313725);
 }
 
 .info-badge {
@@ -575,21 +588,6 @@ hero section since it has class section.
   gap: 0.75rem;
   grid-auto-flow: row;
   margin-bottom: 0.75rem;
-}
-
-.knowledge {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 8px;
-  grid-auto-flow: row;
-  border-radius: 12px;
-  padding: 0.5rem;
-  background-color: #fff;
-  box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.0784313725);
-}
-
-.knowledge-img {
-  border-radius: 10px;
 }
 
 .footer {
