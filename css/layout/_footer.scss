@@ -3,7 +3,7 @@
 .footer {
     background: linear-gradient(102.87deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%);
     border-radius: 20px 20px 0 0;
-    padding: rem(40px) rem(16px) rem(20px) rem(16px);
+    padding: rem(40px) rem($side-margins-phone) rem(20px) rem($side-margins-phone);
     .logo {
         margin: rem(36px) auto rem(42px) auto;
     }

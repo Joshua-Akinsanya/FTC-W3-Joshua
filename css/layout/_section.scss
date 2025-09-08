@@ -3,15 +3,12 @@
 
 .section {
     margin: rem(40px) 0;
-    padding: 0 1rem 1rem 1rem;
 
     @include responsive(tablet) {
         margin: rem(50px) 0;
-        padding-inline: $side-margins-tablet;
     }
     @include responsive(desktop) {
         margin: rem(60px) 0;
-        padding-inline: $side-margins-desktop;
     }
 }
 .section-title {

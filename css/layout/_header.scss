@@ -33,8 +33,13 @@
 }
 
 .hero-section {
-    margin: 0;
-    //Inherits padding from class section
-    padding-bottom: 0;
+    padding-inline: $side-margins-phone;
+    @include responsive(tablet) {
+        padding-inline: $side-margins-tablet;
+    }
+    @include responsive(desktop) {
+        padding-inline: $side-margins-desktop;
+    }
+    // Inherits margin from section class in _section.scss
 }
 // Container for buttons in hero section - see _button.scss

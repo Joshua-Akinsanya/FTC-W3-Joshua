@@ -20,10 +20,12 @@ $box-shadow: #00000014;
 
 $base-font-size: 16px;
 
+$side-margins-phone: 16px;
 $side-margins-tablet: 40px;
 $side-margins-desktop: min(10vw, 130px);
 
 $breakpoints-map: (
     tablet:768px,
-    desktop: 1024px
+    desktop: 1024px,
+    qhd: 2560px // 1440p and above
 );

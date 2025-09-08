@@ -5,14 +5,6 @@
     background-size: cover;
     border-radius: 20px;
     padding: rem(32px) rem(21px) 0 rem(21px);
-
-    margin-inline: rem(16px);
-    @include responsive(tablet) {
-        margin-inline: $side-margins-tablet;
-    }
-    @include responsive(desktop) {
-        margin-inline: $side-margins-desktop;
-    }
 }
 .banner-heading {
     @include typography($primary-darkblue80, rem(36px), 800, calc(54/36));

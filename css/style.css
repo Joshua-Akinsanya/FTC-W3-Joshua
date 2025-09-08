@@ -377,20 +377,31 @@ form-elements, .newsletter-submit-button, .newsletter-email-field {
 /* Section was placed above header to prevent it from overriding styles in
 hero section since it has class section.
 */
+.main-content {
+  padding-inline: 16px;
+}
+@media (min-width: 768px) {
+  .main-content {
+    padding-inline: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .main-content {
+    padding-inline: min(10vw, 130px);
+  }
+}
+
 .section {
   margin: 2.5rem 0;
-  padding: 0 1rem 1rem 1rem;
 }
 @media (min-width: 768px) {
   .section {
     margin: 3.125rem 0;
-    padding-inline: 40px;
   }
 }
 @media (min-width: 1024px) {
   .section {
     margin: 3.75rem 0;
-    padding-inline: min(10vw, 130px);
   }
 }
 
@@ -474,8 +485,17 @@ hero section since it has class section.
 }
 
 .hero-section {
-  margin: 0;
-  padding-bottom: 0;
+  padding-inline: 16px;
+}
+@media (min-width: 768px) {
+  .hero-section {
+    padding-inline: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-section {
+    padding-inline: min(10vw, 130px);
+  }
 }
 
 .site-bar {
@@ -575,17 +595,6 @@ hero section since it has class section.
   background-size: cover;
   border-radius: 20px;
   padding: 2rem 1.3125rem 0 1.3125rem;
-  margin-inline: 1rem;
-}
-@media (min-width: 768px) {
-  .banner-section {
-    margin-inline: 40px;
-  }
-}
-@media (min-width: 1024px) {
-  .banner-section {
-    margin-inline: min(10vw, 130px);
-  }
 }
 
 .banner-heading {
