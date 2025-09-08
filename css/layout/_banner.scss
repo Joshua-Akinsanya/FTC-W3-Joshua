@@ -1,5 +1,7 @@
 @use "../abstracts/index" as *;
 
+// Includes 'One more friend' and 'Adoption' banners
+
 .banner-section {
     background-image: url('../../assets/backgrounds/mobile-banner-3.svg');
     background-size: cover;
@@ -23,4 +25,10 @@
 .banner-sub-text {
     @include typography($neutral80, rem(12px), 500, calc(18 / 12));
     margin-bottom: rem(32px);
+}
+
+.adoption-banner.hide-on-mobile {
+    @include responsive(desktop) {
+        display: block;
+    }
 }
