@@ -3,3 +3,6 @@
 @function rem($pixel, $base-size: $base-font-size) {
     @return calc($pixel / $base-size * 1rem);
 }
+@function em($pixel, $base-size: $base-font-size) {
+    @return calc($pixel / $base-size * 1em);
+}
