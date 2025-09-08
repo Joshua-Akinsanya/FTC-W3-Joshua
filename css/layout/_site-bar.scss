@@ -15,6 +15,7 @@ $nav-height: rem(57px);
 
     .primary-link-button.hide-on-mobile {
         display: none;
+        font-weight: 700;
         @include responsive(desktop) {
             @include flex();
         }

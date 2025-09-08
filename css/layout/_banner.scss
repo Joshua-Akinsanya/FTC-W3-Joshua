@@ -15,10 +15,18 @@
     }
 }
 .banner-heading {
-    @include typography($primary-darkblue80, rem(36px), 800, calc(54/36))
+    @include typography($primary-darkblue80, rem(36px), 800, calc(54/36));
+    @include responsive(desktop) {
+        font-size: rem(52px);
+        line-height: calc(68 / 52);
+    }
 }
 .banner-sub-heading {
-    @include typography($primary-darkblue80, rem(24px), 700, calc(46 / 24))
+    @include typography($primary-darkblue80, rem(24px), 700, calc(46 / 24));
+    @include responsive(desktop) {
+        font-size: rem(36px);
+        line-height: calc(54 / 36);
+    }
 }
 .banner-sub-text {
     @include typography($neutral80, rem(12px), 500, calc(18 / 12));

@@ -2,6 +2,7 @@
 
 .primary-link-button {
     @include flex();
+    @include typography($neutral00, 16px, 500, calc(24 / 16));
     color: $neutral00;
     background-color: $primary-darkblue;
     padding: 1em rem(28px);
@@ -9,6 +10,7 @@
 }
 .secondary-link-button {
     @include flex($gap: rem(8px));
+    @include typography($neutral00, 16px, 500, calc(24 / 16));
     color: $primary-darkblue;
     border-radius: 9999px;
     border: solid 1px $primary-darkblue;
@@ -24,4 +26,13 @@
     @include flex(row, space-between, $gap: rem(16px));
     flex: 1;
     height: 3em; // 3 times the font size of the buttons
+}
+
+.section {
+    .secondary-link-button {
+        @include responsive(desktop) {
+            font-size: rem(14px);
+            line-height: calc(20 / 14);
+        }
+    }
 }
