@@ -1,17 +1,19 @@
 @use "variables.scss" as *;
 @use "sass:map";
 
-@mixin flex($direction: row, $justify: center, $align: center, $gap: 0) {
+@mixin flex($direction: row, $justify: center, $align: center, $gap: 0, $wrap: wrap) {
     display: flex;
     gap: $gap;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
+    flex-wrap: $wrap;
 }
 
-@mixin grid($c-template: 1fr, $gap: 0, $auto-flow: row) {
+@mixin grid($c-template: 1fr, $gap: 0, $auto-flow: row, $r-template: auto) {
     display: grid;
     grid-template-columns: $c-template;
+    grid-template-rows: $r-template;
     gap: $gap;
     grid-auto-flow: $auto-flow;
 }

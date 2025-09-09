@@ -105,6 +105,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   color: #FDFDFD;
   font-size: 16px;
   font-weight: 500;
@@ -121,6 +122,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   color: #FDFDFD;
   font-size: 16px;
   font-weight: 500;
@@ -141,6 +143,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   flex: 1;
   height: 3em;
 }
@@ -158,6 +161,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   height: 100%;
 }
 @media (min-width: 1024px) {
@@ -191,6 +195,7 @@ body {
   box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.0784313725);
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: auto;
   gap: 0.5rem;
   grid-auto-flow: row;
 }
@@ -216,6 +221,7 @@ body {
 .card-info {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: auto;
   gap: 0;
   grid-auto-flow: row;
   color: #667479;
@@ -233,6 +239,7 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
 
@@ -264,6 +271,7 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
   color: #002A48;
   font-size: 0.875rem;
   font-weight: 700;
@@ -276,6 +284,7 @@ body {
 .knowledge {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: auto;
   gap: 8px;
   grid-auto-flow: row;
   border-radius: 12px;
@@ -290,6 +299,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   color: #FDFDFD;
   font-size: 0.625rem;
   font-weight: 700;
@@ -317,12 +327,23 @@ body {
 
 .newsletter-form {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  grid-template-rows: auto;
   gap: 1rem;
   grid-auto-flow: row;
   background-color: #003459;
   border-radius: 16px;
   padding: 1rem;
+}
+@media (min-width: 1024px) {
+  .newsletter-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 1.5rem;
+    grid-auto-flow: column;
+  }
 }
 
 .newsletter-form-heading {
@@ -339,13 +360,24 @@ body {
 }
 
 .newsletter-field-group {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-  grid-auto-flow: row;
+  display: flex;
+  gap: 0.75em;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   background-color: #fff;
   border-radius: 14px;
   padding: 0.75rem;
+}
+@media (min-width: 1024px) {
+  .newsletter-field-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1em;
+    grid-auto-flow: column;
+  }
 }
 
 form-elements, .newsletter-submit-button, .newsletter-email-field {
@@ -360,6 +392,7 @@ form-elements, .newsletter-submit-button, .newsletter-email-field {
   font-weight: 500;
   line-height: 1.4285714286;
   border: solid 1px #99A2A5;
+  flex: 2 1 0;
 }
 
 .newsletter-email-field:focus {
@@ -372,6 +405,7 @@ form-elements, .newsletter-submit-button, .newsletter-email-field {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
+  flex: 1 1 0;
 }
 
 /* Section was placed above header to prevent it from overriding styles in
@@ -504,6 +538,7 @@ hero section since it has class section.
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   height: 3.5625rem;
 }
@@ -531,6 +566,7 @@ hero section since it has class section.
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
 @media (min-width: 768px) {
@@ -552,6 +588,7 @@ hero section since it has class section.
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
 
@@ -584,6 +621,7 @@ hero section since it has class section.
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
   gap: 10px;
   grid-auto-flow: row;
   margin-top: 1.25rem;
@@ -663,6 +701,7 @@ hero section since it has class section.
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .partners-list-item {
@@ -675,6 +714,7 @@ hero section since it has class section.
 .pet-knowledge {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: auto;
   gap: 0.75rem;
   grid-auto-flow: row;
   margin-bottom: 0.75rem;
@@ -696,6 +736,36 @@ hero section since it has class section.
 @media (min-width: 1024px) {
   .footer {
     padding-inline: min(10vw, 130px);
+    padding-bottom: 2.5rem;
+  }
+  .footer .logo {
+    height: 2.5rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-top {
+    display: flex;
+    gap: 2.5rem 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 2.5rem;
+    border-bottom: solid 1px #CCD1D2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-bottom {
+    padding-top: 2.5rem;
+    display: flex;
+    gap: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }
 
@@ -706,12 +776,19 @@ hero section since it has class section.
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .footer-link-container .footer-link {
   color: #00171F;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
+}
+@media (min-width: 1024px) {
+  .footer-link-container {
+    min-width: 25rem;
+    margin: 0;
+  }
 }
 
 .social-media-container {
@@ -720,12 +797,18 @@ hero section since it has class section.
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: max(50%, 150px);
+  flex-wrap: wrap;
+  min-width: 15.625rem;
   margin: auto;
 }
 .social-media-container .social-link {
   display: inline-block;
   height: 1.25rem;
+}
+@media (min-width: 1024px) {
+  .social-media-container {
+    margin: 0;
+  }
 }
 
 .social-icon {
@@ -740,7 +823,16 @@ hero section since it has class section.
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
   margin-bottom: 0.5rem;
+}
+@media (min-width: 1024px) {
+  .policy-link-container {
+    justify-content: space-between;
+    margin: 0;
+    min-width: 14.0625rem;
+  }
 }
 
 .policy-link {

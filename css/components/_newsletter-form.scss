@@ -1,10 +1,15 @@
 @use "../abstracts/index" as *;
 
 .newsletter-form {
-    @include grid($gap: rem(16px));
+    @include grid($c-template: repeat(auto-fit, minmax(min(100%,400px), 1fr)), $gap: rem(16px));
     background-color: $primary-darkblue;
     border-radius: 16px;
     padding: rem(16px);
+
+    @include responsive(desktop) {
+        width: 100%;
+        @include grid($c-template: auto, $gap: rem(24px), $auto-flow: column);
+    }
 }
 .newsletter-form-heading {
     @include typography($neutral00, rem(20px), 700, calc(32 / 20));
@@ -14,10 +19,14 @@
     }
 }
 .newsletter-field-group {
-    @include grid($gap:12px);
+    @include flex($gap:em(12px));
     background-color: $white;
     border-radius: 14px;
     padding: rem(12px);
+
+    @include responsive(desktop) {
+        @include grid($gap: em(16px, 16px),$auto-flow: column)
+    }
 }
 
 // Not a real element
@@ -30,6 +39,7 @@ form-elements {
     @include typography($neutral40, rem(14px), 500, calc(20 / 14));
     border: solid 1px $neutral40;
     @extend form-elements;
+    flex: 2 1 0;
 }
 .newsletter-email-field:focus {
     color: $neutral100;
@@ -39,4 +49,5 @@ form-elements {
     background: $primary-darkblue;
     @include typography($neutral00, 1rem, 500, calc(24 / 16));
     @extend form-elements;
+    flex: 1 1 0;
 }

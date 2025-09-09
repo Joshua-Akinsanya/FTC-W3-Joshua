@@ -12,24 +12,54 @@
     }
     @include responsive(desktop) {
         padding-inline: $side-margins-desktop;
+        padding-bottom: rem(40px);
+        
+        .logo {
+            height: rem(40px);
+            margin: 0; // Margin is only needed when spacing in mobile version
+        }
     }
 }
+.footer-top {
+    @include responsive(desktop) {
+        @include flex($justify: space-between, $gap: rem(40px) 0);
+        // Gap for row spacing, removes need for margins in footer link container
+        padding-bottom: rem(40px);
+        border-bottom: solid 1px $neutral20; // Per design
+    }
+}
+.footer-bottom {
+    @include responsive(desktop) {
+        padding-top: rem(40px);
+        @include flex($justify: space-between)
+    }
+}
+
 .footer-link-container {
     margin: rem(40px) auto rem(20px) auto;
     @include flex($justify: space-between);
     .footer-link {
         @include typography($neutral100, 1rem, 500, calc(24 / 16));
     }
+
+    @include responsive(desktop) {
+        min-width: rem(400px);
+        margin: 0;
+    }
 }
 
 .social-media-container {
     @include flex(row, $justify: space-between);
-    width: max(50%, 150px);
+    min-width: rem(250px);
     margin: auto;
     // <a> tag
     .social-link {
         display: inline-block;
         height: rem(20px);
+    }
+
+    @include responsive(desktop) {
+        margin: 0;
     }
 }
 // <img>
@@ -41,7 +71,13 @@
 
 .policy-link-container {
     @include flex($gap: rem(12px));
+    height: 100%;
     margin-bottom: rem(8px);
+    @include responsive(desktop) {
+        justify-content: space-between;
+        margin: 0;
+        min-width: rem(225px);
+    }
 }
 .policy-link {
     @include typography($neutral60, rem(12px), 500, 1.5);
