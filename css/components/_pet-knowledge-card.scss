@@ -1,24 +1,54 @@
 @use "../abstracts/index" as *;
 
-.knowledge {
+.knowledge-card {
     @include grid($gap: 8px);
     border-radius: 12px;
     padding: rem(8px);
     background-color: $white;
     box-shadow: 0px 4px 28px -2px $box-shadow;
-}
 
+    // Adjust tablet layout to have image on left and text on right
+    @include responsive(tablet) {
+        @include grid($c-template: 1fr 1fr,
+            $gap: rem(12px),
+            $r-template: auto);
+        .pet-image-container {
+            max-height: rem(225px);
+            grid-area: 1 / 1 / 4 / 1;
+        }
+    }
+    @include responsive(desktop) {
+        @include grid($gap: 8px);
+        // revert back to single column layout
+        .pet-image-container {
+            grid-area: 1 / 1 / 1 / 1;
+        }
+    }
+}
+.pet-image-container {
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+        object-fit: cover;
+        object-position: center;
+    }
+}
 .info-badge {
     @include flex();
     @include typography($neutral00, rem(10px), 700);
     max-width: max-content;
+    max-height: max-content;
     background-color: $state-bluesea;
-    padding: rem(2px) rem(10px);
+    padding: em(2px) em(10px);
     border-radius: 9999px;
 }
 .knowledge-title {
-    @include typography($neutral100, 1rem, 700, calc(24 / 16))
+    @include typography($neutral100, 1rem, 700, calc(24 / 16));
+    max-width: 20em;
 }
 .knowledge-text {
-    @include typography($neutral80, rem(14px), 400, calc(20 / 14))
+    @include typography($neutral80, rem(14px), 400, calc(20 / 14));
+    max-width: 22em;
 }

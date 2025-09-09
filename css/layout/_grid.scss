@@ -1,7 +1,21 @@
 @use "../abstracts/index" as *;
 
 .grid {
-    @include grid(repeat(2, 1fr), $gap: 10px);
+    // $min by default is not a runtime variable and will have a fixed value after
+    // transpilation unless it represents a runtime variable
+    --min: min(150px, 100%);
+    $min: var(--min);
+
+    @include grid(repeat(auto-fit, minmax( $min, 1fr)),
+        $gap: 10px);
     margin-top: rem(20px);
     margin-bottom: rem(16px);
+
+    // change runtime variable not compile time variable
+    @include responsive(tablet) {
+        --min: min(200px, 100%);
+    }
+    @include responsive(desktop) {
+        --min: min(250px, 100%)
+    }
 }
