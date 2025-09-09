@@ -1,0 +1,35 @@
+@use "../abstracts/index" as *;
+
+// id o prevent from affecting other page
+#filter-page {
+    margin-bottom: rem(60px);
+    .filter-options-container {
+        display: none;
+    }
+
+    .filter-heading {
+        @include typography($primary-darkblue, rem(24px), 700, calc(36 / 24))
+    }
+    .section-title {
+        @extend .filter-heading;
+        display: inline;
+        margin-right: rem(14px); 
+    }
+    .puppy-number {
+        @include typography($neutral60, rem(14px), 500, calc(20 / 14));
+        display: inline;
+    }
+    .filter-title {
+        @include typography($neutral100, rem(16px), 700, calc(24 / 16));
+    }
+
+    // Each group of filter header and inputs is styled in components/filter-group.scss
+
+    @include responsive(desktop) {
+        @include grid($c-template: rem(280px) 1fr, $gap: rem(20px));
+
+        .filter-options-container {
+            display: block;
+        }
+    }
+}

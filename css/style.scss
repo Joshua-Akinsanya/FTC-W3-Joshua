@@ -8,6 +8,7 @@
 @use "components/card";
 @use "components/pet-knowledge-card";
 @use "components/newsletter-form";
+@use "components/filter-group";
 
 /* Section was placed above header to prevent it from overriding styles in
 hero section since it has class section.
@@ -23,3 +24,5 @@ hero section since it has class section.
 @use "layout/partners";
 @use "layout/pet-knowledge";
 @use "layout/footer";
+
+@use "pages/filter";

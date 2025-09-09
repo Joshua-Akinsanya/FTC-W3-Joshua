@@ -1,0 +1,24 @@
+@use "../abstracts/index" as *;
+
+.filter-option-group {
+    @include flex(column, $gap: rem(8px), $align: first baseline);
+    padding: rem(16px) 0;
+    border-bottom: solid 1px $neutral10;
+
+    &:first-of-type {
+        margin-top: rem(14px);
+        padding-top: 0;
+    }
+
+    .label {
+        @include typography($neutral80, rem(14px), 500, calc(20 / 14));
+    }
+
+    .input-options.number-inputs {
+        @include flex($justify: space-between, $gap: rem(8px));
+        & > * {
+            display: inline-block;
+            flex: 0 1 0%;
+        }
+    }
+}

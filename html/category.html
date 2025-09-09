@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monito</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-bar">
+            <button id="open-sidebar-button" class="nav-button hide-on-desktop" type="button">
+                <!--Hamburger Icon-->
+                <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.6665 23.1667H25.3332M6.6665 16.5H25.3332M6.6665 9.83334H25.3332" stroke="#00171F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <img src="../assets/logo/monito-logo-and-motto.svg" alt="Monito Logo - Pets for Best" class="logo">
+            <nav class="nav hide-on-mobile">
+                <a href="" class="nav-link">Home</a>
+                <a href="" class="nav-link">Category</a>
+                <a href="" class="nav-link">About</a>
+                <a href="" class="nav-link">Contact</a>
+            </nav>
+            <search class="search-bar">
+                <label for="search" class="search-label">
+                    <button id="search-button" class="nav-button" type="button">
+                        <!--Search Icon-->
+                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.6771 21.061L18.4131 16.8283C20.0682 14.763 20.8698 12.1416 20.6529 9.5031C20.436 6.86457 19.2172 4.40946 17.2471 2.64261C15.277 0.875762 12.7054 -0.0685392 10.0609 0.00387725C7.41647 0.0762937 4.90025 1.15992 3.02965 3.03195C1.15904 4.90398 0.0762357 7.42211 0.0038743 10.0686C-0.0684871 12.715 0.875097 15.2886 2.64061 17.2602C4.40612 19.2318 6.85935 20.4515 9.49588 20.6686C12.1324 20.8856 14.7518 20.0835 16.8155 18.4271L21.045 22.6598C21.1519 22.7676 21.279 22.8531 21.419 22.9115C21.5591 22.9699 21.7093 23 21.861 23C22.0128 23 22.163 22.9699 22.303 22.9115C22.4431 22.8531 22.5702 22.7676 22.6771 22.6598C22.8842 22.4453 23 22.1587 23 21.8604C23 21.5621 22.8842 21.2755 22.6771 21.061ZM10.3679 18.4271C8.77668 18.4271 7.22122 17.9549 5.89819 17.0702C4.57516 16.1855 3.54398 14.928 2.93506 13.4569C2.32614 11.9857 2.16681 10.3668 2.47724 8.80501C2.78767 7.24321 3.5539 5.8086 4.67904 4.6826C5.80419 3.5566 7.23771 2.78979 8.79833 2.47912C10.3589 2.16846 11.9766 2.3279 13.4466 2.93729C14.9167 3.54668 16.1732 4.57864 17.0572 5.90267C17.9412 7.2267 18.4131 8.78335 18.4131 10.3757C18.4131 12.5111 17.5655 14.559 16.0567 16.0689C14.5479 17.5788 12.5016 18.4271 10.3679 18.4271Z" fill="#00171F"/>
+                        </svg>
+                    </button>
+                </label>
+                <input type="text" id="search" class="search-input hide-on-mobile" placeholder="Search something here!">
+            </search>
+            <a href="" class="primary-link-button hide-on-mobile">Join the community</a>
+        </div>
+
+        <section id="hero-section" class="section hero-section">
+            <h1 class="site-heading">One More Friend</h1>
+            <h2 class="site-sub-heading">Thousands more fun!</h2>
+            <p class="site-sub-text">Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!</p>
+            <div class="button-container">
+                <a href="" class="secondary-link-button">View Intro
+                    <!--Play Video Icon-->
+                    <img src="../assets/icons/play-circle.png" alt="">
+                </a>
+                <a href="" class="primary-link-button">Explore Now</a>
+            </div>
+            <img src="../assets/images/group-portrait-adorable-puppies.png" alt="Portrait of adorable puppies">
+        </section>
+    </header>
+
+    <main id="filter-page" class="main-content">
+
+        <search class="filter-options-container">
+            <h2 class="filter-heading">Filter</h2>
+            
+            <div class="filter-option-group">
+                <h3 class="filter-title">Gender</h3>
+                <div class="input-options">
+                    <div class="input">
+                        <input type="checkbox" name="gender" id="male" value="Male">
+                        <label for="male" class="label">Male</label>
+                    </div>
+                    <div class="input">
+                        <input type="checkbox" name="gender" id="female" value="Female">
+                        <label for="female" class="label">Female</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-option-group">
+                <h3 class="filter-title">Color</h3>
+                <div class="input-options">
+                    <div class="input">
+                        <input type="checkbox" name="red" id="red" value="Red">
+                        <label for="red" class="label">Red</label>
+                    </div>
+                    <div class="input">
+                        <input type="checkbox" name="apricot" id="apricot" value="Apricot">
+                        <label for="apricot" class="label">Apricot</label>
+                    </div>
+                    <div class="input">
+                        <input type="checkbox" name="black" id="black" value="Black">
+                        <label for="black" class="label">Black</label>
+                    </div>
+                    <div class="input">
+                        <input type="checkbox" name="black-and-white" id="black-and-white" value="Black & White">
+                        <label for="black-and-white" class="label">Black & White</label>
+                    </div>
+                    <div class="input">
+                        <input type="checkbox" name="silver" id="silver" value="Silver">
+                        <label for="silver" class="label">Silver</label>
+                    </div>
+                    <div class="input">
+                        <input type="checkbox" name="tan" id="tan" value="Tan">
+                        <label for="tan" class="label">Tan</label>
+                    </div>
+                </div>  
+            </div>
+            
+            <div class="filter-option-group">
+                <h3 class="filter-title">Price</h3>
+                <div class="input-options number-inputs">
+                    <input type="number" name="min-price" id="min-price" placeholder="Min" class="label">
+                    <input type="number" name="max-price" id="max-price" placeholder="Max" class="label">
+                </div>
+            </div>
+
+            <div class="filter-option-group">
+                <h3 class="filter-title">Breed</h3>
+                <div class="input-options">
+                    <div class="input">
+                        <input type="checkbox" name="small" id="small" value="Small">
+                        <label for="small" class="label">Small</label>
+                    </div>
+                </div>
+                <div class="input-options">
+                    <input type="checkbox" name="medium" id="medium" value="Medium">
+                    <label for="medium" class="label">Medium</label>
+                </div>
+                <div class="input-options">
+                    <input type="checkbox" name="large" id="large" value="Large">
+                    <label for="large" class="label">Large</label>
+                </div>
+            </div>
+        </search>
+
+        <section id="category-section" class="">
+
+            <h2 class="section-title">Small Dog</h2>
+            <p class="puppy-number">52 puppies</p>
+
+            <button>Sort by: Popular</button>
+            <button>Filter</button>
+            <article id="filtered-pets" class="grid">
+                <div class="card pet-card">
+                    <img src="../assets/puppies/puppy-1.png" alt="Puppy 1" class="card-img">
+                    <div class="pet-details">
+                        <h4 class="card-name">MO231 - Pomeranian White</h4>
+                        <div class="card-info">
+                            <p class="detail">Gene: <strong>Male</strong></p>
+                            <span class="dot-separator">&#x2022;</span>
+                            <p class="detail">Age: <strong>02 months</strong></p>
+                        </div>
+                        <strong class="price">6.900.000 VND</strong>
+                    </div>
+                </div>
+                <div class="card pet-card">
+                    <img src="../assets/puppies/puppy-2.png" alt="Puppy 2" class="card-img">
+                    <div class="pet-details">
+                        <h4 class="card-name">MO502 - Poodle Tiny Yellow</h4>
+                        <div class="card-info">
+                            <p class="detail">Gene: <strong>Female</strong></p>
+                            <span class="dot-separator">&#x2022;</span>
+                            <p class="detail">Age: <strong>02 months</strong></p>
+                        </div>
+                        <strong class="price">3.900.000 VND</strong>
+                    </div>
+                </div>
+                <div class="card pet-card">
+                    <img src="../assets/puppies/puppy-3.png" alt="Puppy 3" class="card-img">
+                    <div class="pet-details">
+                        <h4 class="card-name">MO102 - Poodle Tiny Sepia</h4>
+                        <div class="card-info">
+                            <p class="detail">Gene: <strong>Male</strong></p>
+                            <span class="dot-separator">&#x2022;</span>
+                            <p class="detail">Age: <strong>02 months</strong></p>
+                        </div>
+                        <strong class="price">4.000.000 VND</strong>
+                    </div>
+                </div>
+                <div class="card pet-card">
+                    <img src="../assets/puppies/puppy-4.png" alt="Puppy 4" class="card-img">
+                    <div class="pet-details">
+                        <h4 class="card-name">MO512 - Alaskan Malamute Grey</h4>
+                        <div class="card-info">
+                            <p class="detail">Gene: <strong>Male</strong></p>
+                            <span class="dot-separator">&#x2022;</span>
+                            <p class="detail">Age: <strong>03 months</strong></p>
+                        </div>
+                        
+                        <strong class="price">8.900.000 VND</strong>
+                    </div>
+                </div>
+                <div class="card pet-card">
+                    <img src="../assets/puppies/puppy-5.png" alt="Puppy 5" class="card-img">
+                    <div class="pet-details">
+                        <h4 class="card-name">MO231 - Pembroke Corgi Cream</h4>
+                        <div class="card-info">
+                            <p class="detail">Gene: <strong>Male</strong></p>
+                            <span class="dot-separator">&#x2022;</span>
+                            <p class="detail">Age: <strong>03 months</strong></p>
+                        </div>
+                        <strong class="price">7.900.000 VND</strong>
+                    </div>
+                </div>
+                <div class="card pet-card">
+                    <img src="../assets/puppies/puppy-6.png" alt="Puppy 6" class="card-img">
+                    <div class="pet-details">
+                        <h4 class="card-name">MO502 - Pembroke Corgi Tricolor</h4>
+                        <div class="card-info">
+                            <p class="detail">Gene: <strong>Female</strong></p>
+                            <span class="dot-separator">&#x2022;</span>
+                            <p class="detail">Age: <strong>02 months</strong></p>
+                        </div>
+                        <strong class="price">6.900.000 VND</strong>
+                    </div>
+                </div>
+                <div class="card pet-card">
+                    <img src="../assets/puppies/puppy-7.png" alt="Puppy 7" class="card-img">
+                    <div class="pet-details">
+                        <h4 class="card-name">MO102 - Pomeranian Grey</h4>
+                        <div class="card-info">
+                            <p class="detail">Gene: <strong>Female</strong></p>
+                            <span class="dot-separator">&#x2022;</span>
+                            <p class="detail">Age: <strong>02 months</strong></p>
+                        </div>
+                        <strong class="price">6.500.000 VND</strong>
+                    </div>
+                </div>
+                <div class="card pet-card">
+                    <img src="../assets/puppies/puppy-8.png" alt="Puppy 8" class="card-img">
+                    <div class="pet-details">
+                        <h4 class="card-name">MO512 - Poodle Tiny Dairy Cow</h4>
+                        <div class="card-info">
+                            <p class="detail">Gene: <strong>Male</strong></p>
+                            <span class="dot-separator">&#x2022;</span>
+                            <p class="detail">Age: <strong>03 months</strong></p>
+                        </div>
+                        <strong class="price">5.000.000 VND</strong>
+                    </div>
+                </div>
+            </article>
+
+            <a href="" class="secondary-link-button">View more &rsaquo;</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <form action="" class="newsletter-form">
+            <h2 class="newsletter-form-heading">Register now so you don't miss our programs</h2>
+            <div class="newsletter-field-group">
+                <input type="email" name="newsletter-email" id="newsletter-email" placeholder="Enter your Email" class="newsletter-email-field">
+                <button type="submit" class="newsletter-submit-button">Subscribe Now</button>
+            </div>
+        </form>
+
+        <div class="footer-link-container">
+            <a href="" class="footer-link">Home</a>
+            <a href="" class="footer-link">Category</a>
+            <a href="" class="footer-link">About</a>
+            <a href="" class="footer-link">Contact</a>
+        </div>
+
+        <div class="social-media-container">
+            <a href="" class="social-link"><img src="../assets/social/Facebook - Negative.svg" alt="Facebook Icon" class="social-icon"></a>
+            <a href="" class="social-link"><img src="../assets/social/Twitter - Negative.svg" alt="Twitter Icon" class="social-icon"></a>
+            <a href="" class="social-link"><img src="../assets/social/Instagram - Negative.svg" alt="Instagram Icon" class="social-icon"></a>
+            <a href="" class="social-link"><img src="../assets/social/YouTube - Negative.svg" alt="YouTube Icon" class="social-icon"></a>
+        </div>
+
+        <img src="../assets/logo/monito-logo-and-motto.svg" alt="Monito Logo - Pets for Best" class="logo">
+
+        <div class="policy-link-container">
+            <a href="" class="policy-link">Terms of Service</a>
+            <a href="" class="policy-link">Privacy Policy</a>
+        </div>
+        <p class="copyright">© 2022 Monito. All rights reserved.</p>
+    </footer>
+</body>
+</html>

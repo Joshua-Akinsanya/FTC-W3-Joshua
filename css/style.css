@@ -449,6 +449,39 @@ form-elements, .newsletter-submit-button, .newsletter-email-field {
   flex: 1 1 0;
 }
 
+.filter-option-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: first baseline;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  border-bottom: solid 1px #EBEEEF;
+}
+.filter-option-group:first-of-type {
+  margin-top: 0.875rem;
+  padding-top: 0;
+}
+.filter-option-group .label {
+  color: #242B33;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4285714286;
+}
+.filter-option-group .input-options.number-inputs {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.filter-option-group .input-options.number-inputs > * {
+  display: inline-block;
+  flex: 0 1 0%;
+}
+
 /* Section was placed above header to prevent it from overriding styles in
 hero section since it has class section.
 */
@@ -925,5 +958,47 @@ hero section since it has class section.
   .copyright {
     font-size: 0.875rem;
     line-height: 1.4285714286;
+  }
+}
+
+#filter-page {
+  margin-bottom: 3.75rem;
+}
+#filter-page .filter-options-container {
+  display: none;
+}
+#filter-page .filter-heading, #filter-page .section-title {
+  color: #003459;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+#filter-page .section-title {
+  display: inline;
+  margin-right: 0.875rem;
+}
+#filter-page .puppy-number {
+  color: #667479;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4285714286;
+  display: inline;
+}
+#filter-page .filter-title {
+  color: #00171F;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+@media (min-width: 1024px) {
+  #filter-page {
+    display: grid;
+    grid-template-columns: 17.5rem 1fr;
+    grid-template-rows: auto;
+    gap: 1.25rem;
+    grid-auto-flow: row;
+  }
+  #filter-page .filter-options-container {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */
