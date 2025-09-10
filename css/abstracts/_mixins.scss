@@ -10,12 +10,13 @@
     flex-wrap: $wrap;
 }
 
-@mixin grid($c-template: 1fr, $gap: 0, $auto-flow: row, $r-template: auto) {
+@mixin grid($c-template: 1fr, $gap: 0, $auto-flow: row, $r-template: auto, $align: stretch) {
     display: grid;
     grid-template-columns: $c-template;
     grid-template-rows: $r-template;
     gap: $gap;
     grid-auto-flow: $auto-flow;
+    align-items: $align;
 }
 
 @mixin typography($color: black, $size: 1rem, $weight: 400, $line: 1.5) {

@@ -1,0 +1,30 @@
+@use "../abstracts/index" as *;
+
+.heading-subtext {
+    margin-bottom: em(20px, 14px);
+}
+.pet-id {
+    @include typography($neutral40, rem(14px), 500, calc(20 / 14));
+}
+.pet-name {
+    @include typography($neutral100, rem(24px), 700, calc(36 / 24));
+}
+.price-in-detail {
+    @include typography($primary-darkblue80, rem(20px), 700, calc(32 / 20));
+}
+.share {
+    @include typography($primary-darkblue80, rem(14px), 700, calc(20 / 14));
+    display: inline;
+}
+
+.pet-details-overall-container {
+    @include flex(column, $gap: rem(16px));
+
+    @include responsive(tablet) {
+        @include grid(1fr 1fr, $gap: rem(32px));
+
+        .switchable-image-group {
+            grid-area: 1 / 1 / 4 / 1;
+        }
+    }
+}

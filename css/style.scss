@@ -9,6 +9,10 @@
 @use "components/pet-knowledge-card";
 @use "components/newsletter-form";
 @use "components/filter-group";
+@use "components/customer-gallery-slider";
+@use "components/switchable-image-group";
+@use "components/guarantee-container";
+@use "components/share-menu";
 
 /* Section was placed above header to prevent it from overriding styles in
 hero section since it has class section.
@@ -23,6 +27,8 @@ hero section since it has class section.
 @use "layout/products";
 @use "layout/partners";
 @use "layout/pet-knowledge";
+@use "layout/pet-details-table";
 @use "layout/footer";
 
 @use "pages/filter";
+@use "pages/pet-details";

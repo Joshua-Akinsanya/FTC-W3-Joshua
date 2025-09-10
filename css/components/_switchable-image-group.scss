@@ -1,0 +1,82 @@
+@use "../abstracts/index" as *;
+
+$img-width-mobile: rem(68px);
+$img-width-tablet: rem(80px);
+$img-width-desktop: rem(94px);
+
+$thumb-gap-mobile: rem(8px);
+$thumb-gap-tablet: rem(12px);
+$thumb-gap-desktop: rem(16px);
+
+$switchimg-maxwidth-mobile : calc($img-width-mobile * 6 + $thumb-gap-mobile * 5);
+$switchimg-maxwidth-tablet : calc($img-width-tablet * 6 + $thumb-gap-tablet * 5);
+$switchimg-maxwidth-desktop : calc($img-width-desktop * 6 + $thumb-gap-desktop * 5);
+
+.switchable-image-group {
+    max-width: 100%;
+    margin: 0 auto;
+
+    @include responsive(tablet) {
+        max-width: 50%;
+    }
+}
+
+// Main Image
+.switchable-image {
+    width: 100%;
+    max-width: calc($img-width-mobile * 6 + $thumb-gap-mobile * 5);
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    margin-bottom: rem(9px);
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+// Thumbnails
+.thumbnail-container {
+    @include flex($justify: flex-start, $gap: $thumb-gap-mobile, $wrap: nowrap);
+    overflow: scroll;
+
+    & > * {
+        flex-shrink: 0; // Prevent shrinking when container is too small
+    }
+
+    .thumbnail {
+        width: $img-width-mobile;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        border-radius: rem(6px);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        @include responsive(tablet) {
+            width: $img-width-tablet;
+        }
+        @include responsive(desktop) {
+            width: $img-width-desktop;
+        }
+    }
+
+    .thumbnail.active {
+        border: rem(3px) solid $secondary-monyellow60;
+        border-radius: rem(8px);
+    }
+
+    // For Thumbnail container
+    @include responsive(tablet) {
+        gap: $thumb-gap-tablet
+    }
+    @include responsive(desktop) {
+        gap: $thumb-gap-desktop
+    }
+}

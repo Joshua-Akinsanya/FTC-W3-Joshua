@@ -1,0 +1,24 @@
+@use "../abstracts/index" as *;
+
+.share-container {
+    @include flex($gap: em(8px));
+    display: inline-flex;
+    margin-left: auto;
+
+    .share-icon {
+        width: em(15px, 14px);
+        height: em(15px, 14px);
+    }
+    .share-menu {
+        @include flex($gap: em(8px));
+        display: none;
+        padding: 0; // Override default menu padding of 40px
+        @include responsive(desktop) {
+            display: flex;
+        }
+    }
+
+    @include responsive(desktop) {
+        margin-left: 0;
+    }
+}

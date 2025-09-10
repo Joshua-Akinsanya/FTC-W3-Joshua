@@ -1,0 +1,23 @@
+@use "../abstracts/index" as *;
+
+.pet-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: rem(24px);
+
+    tr {
+        td {
+            @include typography($neutral60, rem(14px), 500, calc(20 / 14));
+            padding: rem(12px) rem(11px);
+            vertical-align: top;
+        }
+        td:first-child {
+            width: 50%;
+            max-width: em(100px);
+        }
+    }
+
+    tr:not(:last-child) td {
+        border-bottom: solid 1px $neutral10;
+    }
+}

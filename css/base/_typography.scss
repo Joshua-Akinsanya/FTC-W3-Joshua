@@ -1,3 +1,5 @@
+@use "../abstracts/index" as *;
+
 /*  Thin 100
     UltraLight 200
     Light 300
@@ -49,4 +51,13 @@
     font-weight: 900;
     font-style: normal;
     src: url('../../assets/font/gilroy/gilroy-heavy.woff');
+}
+
+.heading-subtext {
+    @include typography($neutral60, rem(14px), 500, calc(20 / 14));
+    display: inline;
+}
+
+.bold {
+    font-weight: 700;
 }

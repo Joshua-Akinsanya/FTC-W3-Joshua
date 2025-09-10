@@ -1,0 +1,20 @@
+@use "../abstracts/index" as *;
+
+.guarantee-container {
+    @include flex($gap: rem(16px), $justify: flex-start, $align: center);
+    max-width: fit-content;
+    padding: rem(14px) rem(12px);
+    border-radius: rem(10px);
+    background: linear-gradient(102.87deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%);
+    margin: rem(24px) 0;
+    
+    p {
+        @include typography($primary-darkblue80, $size: rem(14px), $weight: 700, $line: calc(20 / 14));
+        @include grid($c-template: auto 1fr, $gap: rem(8px), $align: center);
+        
+        img {
+            width: em(27px, 14px);
+            height: em(27px, 14px);
+        }
+    }
+}
