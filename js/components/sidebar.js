@@ -1,6 +1,6 @@
 import { CssConstants } from "../utils/css-constants.js";
 
-export function sidebar(sidebarId, sidebarBacklayerId, openbtnId, closebtnId) {
+export function sidebarSetup(sidebarId, sidebarBacklayerId, openbtnId, closebtnId) {
   const sidebar = document.querySelector(sidebarId);
   const sidebarBacklayer = document.querySelector(sidebarBacklayerId);
   const openButton = document.querySelector(openbtnId);

@@ -4,7 +4,20 @@
 #filter-page {
     margin-bottom: rem(60px);
     .filter-options-container {
-        display: none;
+        @include responsive-range($start: 1px, $end: 1023px) {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            bottom: 1rem;
+            z-index: 10;
+            background-color: canvas;
+            padding: 1em;
+            border-radius: rem(12px);
+            border: solid 1px #22222222;
+            max-width: em(220px, 14px);
+            max-height: max(300px, 90vh);
+            overflow-y: scroll;
+        }
     }
 
     .filter-heading {
@@ -23,9 +36,23 @@
 
     @include responsive(desktop) {
         @include grid($c-template: rem(280px) 1fr, $gap: rem(20px));
+    }
+}
 
-        .filter-options-container {
-            display: block;
-        }
+.backlayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5;
+    z-index: 9;
+}
+
+.filter-button {
+    @include typography($primary-darkblue80, rem(16px), 700, calc(24 / 16));
+
+    &:hover {
+        background-color: #22222222;
     }
 }

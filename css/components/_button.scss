@@ -1,28 +1,33 @@
 @use "../abstracts/index" as *;
 
-.primary-link-button {
+btn-styles {
     @include flex();
-    // Line height changed to 1 to vertically center the button text
-    @include typography($neutral00, 16px, 500, 1); 
-    color: $neutral00;
+    @include typography($neutral00, 16px, 500, 1);
+    border-radius: calc(Infinity * 1px);
+    padding: 1em rem(28px)
+}
+.primary-link-button {
+    @extend btn-styles;
     background-color: $primary-darkblue;
-    padding: 1em rem(28px);
-    border-radius: 9999px;
 }
 .secondary-link-button {
-    @include flex($gap: rem(8px));
-    @include typography($neutral00, 16px, 500, 1);
+    @extend btn-styles;
+    gap: rem(8px);
     color: $primary-darkblue;
-    border-radius: 9999px;
     border: solid 1px $primary-darkblue;
-    padding: 1em rem(28px);
-    // height: 100%;
 
     img {
-        width: rem(18px);
-        height: rem(18px);
+        width: em(18px);
+        height: em(18px);
     }
 }
+.neutral-button {
+    @extend btn-styles;
+    display: inline-flex;
+    border: solid 1px $neutral20;
+    color: $neutral60;
+}
+
 .button-container {
     @include flex(row, space-between, $gap: rem(16px));
     flex: 1;

@@ -72,8 +72,8 @@
     </header>
 
     <main id="filter-page" class="main-content">
-
-        <search class="filter-options-container">
+        
+        <search id="filter-menu" class="filter-options-container">
             <h2 class="filter-heading">Filter</h2>
             
             <div class="filter-option-group">
@@ -146,14 +146,15 @@
                 </div>
             </div>
         </search>
+        <div id="filter-backlayer" class="backlayer hide-on-desktop"></div>
 
         <section id="category-section" class="">
 
             <h2 class="section-title">Small Dog</h2>
             <p class="heading-subtext">52 puppies</p>
 
-            <button>Sort by: Popular</button>
-            <button>Filter</button>
+            <button class="neutral-button">Sort by: Popular &#x2304;</button>
+            <button id="filter-button" class="hide-on-desktop filter-button">Filter</button>
             <article id="filtered-pets" class="grid">
                 <div class="card pet-card">
                     <img src="../assets/puppies/puppy-1.png" alt="Puppy 1" class="card-img">
