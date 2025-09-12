@@ -3,5 +3,8 @@ export const CssConstants = {
     tablet: 768,
     desktop: 1024
   },
-  closed: 'closed'
+  classnames: {
+    closed: 'closed',
+    active: 'active'
+  }
 }

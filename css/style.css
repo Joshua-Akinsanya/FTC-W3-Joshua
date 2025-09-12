@@ -97,7 +97,7 @@ button {
 
 @media (min-width: 1px) and (max-width: 1024px) {
   .hide-on-mobile {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -118,7 +118,7 @@ button {
 
 @media (min-width: 1024px) {
   .hide-on-desktop {
-    display: none;
+    display: none !important;
   }
 }
 btn-styles, .neutral-button, .secondary-link-button, .primary-link-button {
@@ -627,19 +627,9 @@ form-elements, .newsletter-submit-button, .newsletter-email-field {
   }
 }
 
-.switchable-image-group {
-  max-width: 100%;
-  margin: 0 auto;
-}
-@media (min-width: 768px) {
-  .switchable-image-group {
-    max-width: 50%;
-  }
-}
-
 .switchable-image {
+  position: relative;
   width: 100%;
-  max-width: 28rem;
   aspect-ratio: 1/1;
   overflow: hidden;
   margin-bottom: 0.5625rem;
@@ -651,6 +641,25 @@ form-elements, .newsletter-submit-button, .newsletter-email-field {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+.switchable-image .floating-caret {
+  position: absolute;
+  top: 50%;
+  width: 2.625rem;
+  height: 2.625rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transition: background 0.3 ease, transform 0.1s ease;
+}
+.switchable-image .floating-caret:hover {
+  background-color: rgba(255, 255, 255, 0.6666666667);
+  transform: scale(1.1);
+}
+.switchable-image .floating-caret-left {
+  left: 1rem;
+}
+.switchable-image .floating-caret-right {
+  right: 1rem;
 }
 
 .thumbnail-container {
@@ -749,6 +758,14 @@ form-elements, .newsletter-submit-button, .newsletter-email-field {
   width: 1.0714285714em;
   height: 1.0714285714em;
 }
+.share-container .share {
+  color: #002A48;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 1em 1em 1em 0;
+  display: inline;
+}
 .share-container .share-menu {
   display: flex;
   gap: 0.5em;
@@ -756,7 +773,6 @@ form-elements, .newsletter-submit-button, .newsletter-email-field {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  display: none;
   padding: 0;
 }
 @media (min-width: 1024px) {
@@ -1115,12 +1131,17 @@ hero section since it has class section.
   border-collapse: collapse;
   margin-top: 1.5rem;
 }
+.pet-details-table tr th {
+  font-weight: 700;
+  padding: 0.75em 0.6875em;
+  text-align: left;
+}
 .pet-details-table tr td {
   color: #667479;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.4285714286;
-  padding: 0.75rem 0.6875rem;
+  padding: 0.75em 0.6875em;
   vertical-align: top;
 }
 .pet-details-table tr td:first-child {
@@ -1377,19 +1398,6 @@ hero section since it has class section.
   gap: 1rem;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: first baseline;
   flex-wrap: wrap;
-}
-@media (min-width: 768px) {
-  .pet-details-overall-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 2rem;
-    grid-auto-flow: row;
-    align-items: stretch;
-  }
-  .pet-details-overall-container .switchable-image-group {
-    grid-area: 1/1/4/1;
-  }
 }/*# sourceMappingURL=style.css.map */

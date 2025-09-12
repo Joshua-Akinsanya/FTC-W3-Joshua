@@ -8,23 +8,10 @@ $thumb-gap-mobile: rem(8px);
 $thumb-gap-tablet: rem(12px);
 $thumb-gap-desktop: rem(16px);
 
-$switchimg-maxwidth-mobile : calc($img-width-mobile * 6 + $thumb-gap-mobile * 5);
-$switchimg-maxwidth-tablet : calc($img-width-tablet * 6 + $thumb-gap-tablet * 5);
-$switchimg-maxwidth-desktop : calc($img-width-desktop * 6 + $thumb-gap-desktop * 5);
-
-.switchable-image-group {
-    max-width: 100%;
-    margin: 0 auto;
-
-    @include responsive(tablet) {
-        max-width: 50%;
-    }
-}
-
 // Main Image
 .switchable-image {
+    position: relative;
     width: 100%;
-    max-width: calc($img-width-mobile * 6 + $thumb-gap-mobile * 5);
     aspect-ratio: 1 / 1;
     overflow: hidden;
     margin-bottom: rem(9px);
@@ -35,6 +22,23 @@ $switchimg-maxwidth-desktop : calc($img-width-desktop * 6 + $thumb-gap-desktop *
         object-fit: cover;
         object-position: center;
     }
+
+    .floating-caret {
+        position: absolute;
+        top: 50%;
+        width: rem(42px);
+        height: rem(42px);
+        background-color: $transparent-button-color;
+        border-radius: 50%;
+        transition: background 0.3 ease, transform 0.1s ease;
+        
+        &:hover {
+            background-color: $transparent-button-hover;
+            transform: scale(1.1);
+        }
+    }
+    .floating-caret-left { left: 1rem }
+    .floating-caret-right { right: 1rem }
 }
 
 // Thumbnails

@@ -9,9 +9,15 @@
         width: em(15px, 14px);
         height: em(15px, 14px);
     }
+
+    .share {
+        @include typography($primary-darkblue80, rem(14px), 700, 1);
+        padding: 1em 1em 1em 0;
+        display: inline;
+    }
+
     .share-menu {
         @include flex($gap: em(8px));
-        display: none;
         padding: 0; // Override default menu padding of 40px
         @include responsive(desktop) {
             display: flex;

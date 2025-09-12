@@ -15,7 +15,7 @@
                 <path d="M6.6665 23.1667H25.3332M6.6665 16.5H25.3332M6.6665 9.83334H25.3332" stroke="#00171F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </button>
-            <img src="../assets/logo/monito-logo-and-motto.svg" alt="Monito Logo - Pets for Best" class="logo">
+            <img src="../assets/logo/monito-logo-and-motto.svg" alt="Monito Logo - Pets for Best" class="logo" loading="eager">
             <nav class="nav hide-on-mobile">
                 <a href="" class="nav-link">Home</a>
                 <a href="" class="nav-link">Category</a>
@@ -62,29 +62,51 @@
         <article class="pet-details-overall-container">
             <div class="switchable-image-group">
                 <div class="switchable-image">
-                    <img src="../assets/puppy/shiba-1.png" alt="">
+                    <img id="switchable-image" src="../assets/puppy/shiba-1.webp" alt="" loading="eager">
+                    <button id="left-button-switchable" class="floating-caret floating-caret-left">
+                        <img src="../assets/icons/caret-left-white.svg" alt="">
+                    </button>
+                    <button id="right-button-switchable" class="floating-caret floating-caret-right">
+                        <img src="../assets/icons/caret-right-white.svg" alt="">
+                    </button>
                 </div>
 
                 <div class="thumbnail-container">
                     <div class="thumbnail active">
-                        <img src="../assets/puppy/shiba-1.png" alt="">
+                        <img id="thumbnail-1" src="../assets/puppy/shiba-1.webp" alt="" loading="lazy">
                     </div>
                     <div class="thumbnail">
-                        <img src="../assets/puppy/shiba-2.png" alt="">
+                        <img id="thumbnail-2" src="../assets/puppy/shiba-2.webp" alt="" loading="lazy">
                     </div>
                     <div class="thumbnail">
-                        <img src="../assets/puppy/shiba-3.png" alt="">
+                        <img id="thumbnail-3" src="../assets/puppy/shiba-3.webp" alt="" loading="lazy">
                     </div>
                     <div class="thumbnail">
-                        <img src="../assets/puppy/shiba-4.png" alt="">
+                        <img id="thumbnail-4" src="../assets/puppy/shiba-4.webp" alt="" loading="lazy">
                     </div>
                     <div class="thumbnail">
-                        <img src="../assets/puppy/shiba-5.png" alt="">
+                        <img id="thumbnail-5" src="../assets/puppy/shiba-5.webp" alt="" loading="lazy">
                     </div>
                     <div class="thumbnail">
-                        <img src="../assets/puppy/shiba-6.png" alt="">
+                        <img id="thumbnail-6" src="../assets/puppy/shiba-6.webp" alt="" loading="lazy">
                     </div>
                 </div>
+            </div>
+
+            <div class="guarantee-container hide-on-mobile">
+                <p><img src="../assets/icons/healthy-pet.svg" alt="" loading="lazy">100% health guarantee for pets</p>
+                <p><img src="../assets/icons/pet-id.svg" alt="" loading="lazy"> 100% guarantee of pet identification</p>
+            </div>
+
+            <div class="share-container hide-on-mobile">
+                <img src="../assets/icons/share.svg" alt="" class="share-icon" loading="lazy">
+                <p id="share-text" class="share">Share</p>
+                <menu id="share-menu" class="share-menu">
+                    <a href=""><img src="../assets/social/facebook -grey.svg" alt="" loading="lazy"></a>
+                    <a href=""><img src="../assets/social/twitter-grey.svg" alt="Twitter" loading="lazy"></a>
+                    <a href=""><img src="../assets/social/instagram-grey.svg" alt="Instagram" loading="lazy"></a>
+                    <a href=""><img src="../assets/social/youtube-grey.svg" alt="YouTube" loading="lazy"></a>
+                </menu>
             </div>
 
             <div class="pet-full-info-header">
@@ -99,78 +121,80 @@
                     </a>
                 </div>
             </div>
-
-            <div class="share-container">
-                <img src="../assets/icons/share.svg" alt="" class="share-icon">
-                <p class="share">Share</p>
-                <menu class="share-menu">
-                    <a href=""><img src="../assets/social/facebook -grey.svg" alt=""></a>
-                    <a href=""><img src="../assets/social/twitter-grey.svg" alt="Twitter"></a>
-                    <a href=""><img src="../assets/social/instagram-grey.svg" alt="Instagram"></a>
-                    <a href=""><img src="../assets/social/youtube-grey.svg" alt="YouTube"></a>
-                </menu>
-            </div>
             
             <table class="pet-details-table">
-                <tbody>
-                    <tr>
-                        <td>SKU</td>
-                        <td>: #1000078</td>
-                    </tr>
-                    <tr>
-                        <td>Gender</td>
-                        <td>: Female</td>
-                    </tr>
-                    <tr>
-                        <td>Age</td>
-                        <td>: 2 Months</td>
-                    </tr>
-                    <tr>
-                        <td>Size</td>
-                        <td>: Small</td>
-                    </tr>
-                    <tr>
-                        <td>Color</td>
-                        <td>: Appricot & Tan</td>
-                    </tr>
-                    <tr>
-                        <td>Vaccinated</td>
-                        <td>: Yes</td>
-                    </tr>
-                    <tr>
-                        <td>Dewormed</td>
-                        <td>: Yes</td>
-                    </tr>
-                    <tr>
-                        <td>Cert</td>
-                        <td>: Yes (MKA)</td>
-                    </tr>
-                    <tr>
-                        <td>Microchip</td>
-                        <td>: Yes</td>
-                    </tr>
-                    <tr>
-                        <td>Location</td>
-                        <td>: Vietnam</td>
-                    </tr>
-                    <tr>
-                        <td>Published Date</td>
-                        <td>: 12-Oct-2022</td>
-                    </tr>
-                    <tr>
-                        <td>Additional Information</td>
-                        <td>: Pure breed Shih Tzu.<br>
-                            Good body structure.<br>
-                            With MKA cert and Microchip.<br>
-                            Father from champion lineage.<br>
-                        </td>
-                    </tr>   
-                </tbody>
+                <tr class="bold">
+                    <th>Information</th>
+                    <th>
+                        <div class="share-container hide-on-desktop">
+                            <img src="../assets/icons/share.svg" alt="" class="share-icon"  loading="lazy">
+                            <p id="share-text" class="share">Share</p>
+                            <menu id="share-menu" class="share-menu">
+                                <a href=""><img src="../assets/social/facebook -grey.svg" alt="" loading="lazy"></a>
+                                <a href=""><img src="../assets/social/twitter-grey.svg" alt="Twitter" loading="lazy"></a>
+                                <a href=""><img src="../assets/social/instagram-grey.svg" alt="Instagram" loading="lazy"></a>
+                                <a href=""><img src="../assets/social/youtube-grey.svg" alt="YouTube" loading="lazy"></a>
+                            </menu>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <td>SKU</td>
+                    <td>: #1000078</td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>: Female</td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>: 2 Months</td>
+                </tr>
+                <tr>
+                    <td>Size</td>
+                    <td>: Small</td>
+                </tr>
+                <tr>
+                    <td>Color</td>
+                    <td>: Appricot & Tan</td>
+                </tr>
+                <tr>
+                    <td>Vaccinated</td>
+                    <td>: Yes</td>
+                </tr>
+                <tr>
+                    <td>Dewormed</td>
+                    <td>: Yes</td>
+                </tr>
+                <tr>
+                    <td>Cert</td>
+                    <td>: Yes (MKA)</td>
+                </tr>
+                <tr>
+                    <td>Microchip</td>
+                    <td>: Yes</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>: Vietnam</td>
+                </tr>
+                <tr>
+                    <td>Published Date</td>
+                    <td>: 12-Oct-2022</td>
+                </tr>
+                <tr>
+                    <td>Additional Information</td>
+                    <td>: Pure breed Shih Tzu.<br>
+                        Good body structure.<br>
+                        With MKA cert and Microchip.<br>
+                        Father from champion lineage.<br>
+                    </td>
+                </tr>   
             </table>
             
-            <div class="guarantee-container">
-                <p><img src="../assets/icons/healthy-pet.svg" alt="">100% health guarantee for pets</p>
-                <p><img src="../assets/icons/pet-id.svg" alt=""> 100% guarantee of pet identification</p>
+            <div class="guarantee-container hide-on-desktop">
+                <p><img src="../assets/icons/healthy-pet.svg" alt="" loading="lazy">100% health guarantee for pets</p>
+                <p><img src="../assets/icons/pet-id.svg" alt="" loading="lazy"> 100% guarantee of pet identification</p>
             </div>
         </article>
 
@@ -178,19 +202,19 @@
             <h2 class="customer-gallery-heading">Our lovely customer</h2>
             <div class="customer-gallery-slider" aria-label="Customer photo slider">
                 <div class="img-container">
-                    <img src="../assets/customers/customer-1.png" alt="">
+                    <img src="../assets/customers/customer-1.webp" alt="" loading="lazy">
                 </div>
                 <div class="img-container">
-                    <img src="../assets/customers/customer-2.png" alt="">
+                    <img src="../assets/customers/customer-2.webp" alt="" loading="lazy">
                 </div>
                 <div class="img-container">
-                    <img src="../assets/customers/customer-3.png" alt="">
+                    <img src="../assets/customers/customer-3.webp" alt="" loading="lazy">
                 </div>
                 <div class="img-container">
-                    <img src="../assets/customers/customer-4.png" alt="">
+                    <img src="../assets/customers/customer-4.webp" alt="" loading="lazy">
                 </div>
                 <div class="img-container">
-                    <img src="../assets/customers/customer-5.png" alt="">
+                    <img src="../assets/customers/customer-5.webp" alt="" loading="lazy">
                 </div>
             </div>
         </section>
@@ -201,7 +225,7 @@
 
             <article id="new-pets" class="grid">
                 <div class="card pet-card">
-                    <img src="../assets/puppies/puppy-1.png" alt="Puppy 1" class="card-img">
+                    <img src="../assets/puppies/puppy-1.webp" alt="Puppy 1" class="card-img" loading="lazy">
                     <div class="pet-details">
                         <h4 class="card-name">MO231 - Pomeranian White</h4>
                         <div class="card-info">
@@ -213,7 +237,7 @@
                     </div>
                 </div>
                 <div class="card pet-card">
-                    <img src="../assets/puppies/puppy-2.png" alt="Puppy 2" class="card-img">
+                    <img src="../assets/puppies/puppy-2.webp" alt="Puppy 2" class="card-img" loading="lazy">
                     <div class="pet-details">
                         <h4 class="card-name">MO502 - Poodle Tiny Yellow</h4>
                         <div class="card-info">
@@ -225,7 +249,7 @@
                     </div>
                 </div>
                 <div class="card pet-card">
-                    <img src="../assets/puppies/puppy-3.png" alt="Puppy 3" class="card-img">
+                    <img src="../assets/puppies/puppy-3.webp" alt="Puppy 3" class="card-img" loading="lazy">
                     <div class="pet-details">
                         <h4 class="card-name">MO102 - Poodle Tiny Sepia</h4>
                         <div class="card-info">
@@ -237,7 +261,7 @@
                     </div>
                 </div>
                 <div class="card pet-card">
-                    <img src="../assets/puppies/puppy-4.png" alt="Puppy 4" class="card-img">
+                    <img src="../assets/puppies/puppy-4.webp" alt="Puppy 4" class="card-img" loading="lazy">
                     <div class="pet-details">
                         <h4 class="card-name">MO512 - Alaskan Malamute Grey</h4>
                         <div class="card-info">
@@ -250,7 +274,7 @@
                     </div>
                 </div>
                 <div class="card pet-card">
-                    <img src="../assets/puppies/puppy-5.png" alt="Puppy 5" class="card-img">
+                    <img src="../assets/puppies/puppy-5.webp" alt="Puppy 5" class="card-img" loading="lazy">
                     <div class="pet-details">
                         <h4 class="card-name">MO231 - Pembroke Corgi Cream</h4>
                         <div class="card-info">
@@ -262,7 +286,7 @@
                     </div>
                 </div>
                 <div class="card pet-card">
-                    <img src="../assets/puppies/puppy-6.png" alt="Puppy 6" class="card-img">
+                    <img src="../assets/puppies/puppy-6.webp" alt="Puppy 6" class="card-img" loading="lazy">
                     <div class="pet-details">
                         <h4 class="card-name">MO502 - Pembroke Corgi Tricolor</h4>
                         <div class="card-info">
@@ -274,7 +298,7 @@
                     </div>
                 </div>
                 <div class="card pet-card">
-                    <img src="../assets/puppies/puppy-7.png" alt="Puppy 7" class="card-img">
+                    <img src="../assets/puppies/puppy-7.webp" alt="Puppy 7" class="card-img" loading="lazy">
                     <div class="pet-details">
                         <h4 class="card-name">MO102 - Pomeranian Grey</h4>
                         <div class="card-info">
@@ -286,7 +310,7 @@
                     </div>
                 </div>
                 <div class="card pet-card">
-                    <img src="../assets/puppies/puppy-8.png" alt="Puppy 8" class="card-img">
+                    <img src="../assets/puppies/puppy-8.webp" alt="Puppy 8" class="card-img" loading="lazy">
                     <div class="pet-details">
                         <h4 class="card-name">MO512 - Poodle Tiny Dairy Cow</h4>
                         <div class="card-info">

@@ -9,19 +9,19 @@ export function sidebarSetup(sidebarId, sidebarBacklayerId, openbtnId, closebtnI
   openButton.addEventListener('click', function () {
     sidebar.style.transform = 'translateX(0%)';
     sidebar.style.opacity = 1;
-    removeClass(sidebarBacklayer, CssConstants.closed);
+    removeClass(sidebarBacklayer, CssConstants.classnames.closed);
   });
 
   closeButton.addEventListener('click', function () {
     sidebar.style.transform = 'translateX(-100%)';
     sidebar.style.opacity = 0;
-    addClass(sidebarBacklayer, CssConstants.closed);
+    addClass(sidebarBacklayer, CssConstants.classnames.closed);
   });
 
   sidebarBacklayer.addEventListener('click', function () {
     sidebar.style.transform = 'translateX(-100%)';
     sidebar.style.opacity = 0;
-    addClass(sidebarBacklayer, CssConstants.closed);
+    addClass(sidebarBacklayer, CssConstants.classnames.closed);
   })
 }
 

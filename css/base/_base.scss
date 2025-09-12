@@ -4,7 +4,7 @@
 
 .hide-on-mobile {
     @include responsive-range(1px, calc(map.get($breakpoints-map, desktop)) ) {
-        display: none;
+        display: none !important;
     }
 }
 
@@ -25,6 +25,6 @@ button {
 
 @media (min-width: map.get($breakpoints-map, desktop)) {
     .hide-on-desktop {
-        display: none;
+        display: none !important;
     }
 }

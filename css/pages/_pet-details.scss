@@ -18,13 +18,5 @@
 }
 
 .pet-details-overall-container {
-    @include flex(column, $gap: rem(16px));
-
-    @include responsive(tablet) {
-        @include grid(1fr 1fr, $gap: rem(32px));
-
-        .switchable-image-group {
-            grid-area: 1 / 1 / 4 / 1;
-        }
-    }
+    @include flex(column, $gap: rem(16px), $align: first baseline);
 }
