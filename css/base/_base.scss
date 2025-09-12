@@ -3,7 +3,9 @@
 @use "sass:map";
 
 .hide-on-mobile {
-    display: none;
+    @include responsive-range(1px, calc(map.get($breakpoints-map, desktop)) ) {
+        display: none;
+    }
 }
 
 body {
