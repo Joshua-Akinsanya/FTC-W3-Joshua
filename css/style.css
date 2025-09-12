@@ -199,6 +199,82 @@ body {
   height: 100%;
 }
 
+.closed {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .sidebar.hide-on-desktop {
+    display: none;
+  }
+}
+
+.sidebar {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  height: 100dvh;
+  width: clamp(min(270px, 100%), 70%, 375px);
+  padding-bottom: 2em;
+  background-color: #F7DBA7;
+  overflow-y: scroll;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.sidebar-header {
+  display: flex;
+  gap: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-right: 2rem;
+  height: 3.5625em;
+}
+@media (min-width: 768px) {
+  .sidebar-header {
+    height: 4.75em;
+  }
+}
+
+.sidenav {
+  display: flex;
+  gap: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: first baseline;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.sidenav .nav-link {
+  display: block;
+  padding: 1em;
+  width: 100%;
+}
+
+.sidebar-backlayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 99;
+  width: 100%;
+  background-color: #222222;
+  opacity: 0.5;
+}
+
 .card {
   padding: 0.5rem;
   background-color: #FDFDFD;
@@ -819,7 +895,7 @@ hero section since it has class section.
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  height: 3.5625rem;
+  height: 3.5625em;
 }
 .site-bar .logo {
   height: 2rem;
@@ -850,12 +926,12 @@ hero section since it has class section.
 }
 @media (min-width: 768px) {
   .site-bar {
-    height: 4.75rem;
+    height: 4.75em;
   }
 }
 @media (min-width: 1024px) {
   .site-bar {
-    height: 6.25rem;
+    height: 6.25em;
     padding-inline: min(10vw, 130px);
   }
 }

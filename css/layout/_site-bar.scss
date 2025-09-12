@@ -1,11 +1,9 @@
 @use "../abstracts/index" as *;
 
-$nav-height: rem(57px);
-
 .site-bar {
     @include flex(row, $justify: space-between);
     width: 100%;
-    height: rem(57px);
+    height: $nav-height-mobile;
     
     .logo {
         height: rem(32px);
@@ -22,10 +20,10 @@ $nav-height: rem(57px);
     }
 
     @include responsive(tablet) {
-        height: rem(76px);
+        height: $nav-height-tablet
     }
     @include responsive(desktop) {
-        height: rem(100px);
+        height: $nav-height-desktop;
         padding-inline: $side-margins-desktop;
     }
 }

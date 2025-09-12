@@ -1,0 +1,63 @@
+@use "../abstracts/index" as *;
+@use "sass:color";
+
+.closed {
+    display: none;
+}
+
+.sidebar.hide-on-desktop {
+    @include responsive(desktop) {
+        display: none;
+    }
+}
+
+.sidebar {
+    $width: clamp(min(270px, 100%), 70%, 375px);
+
+    @include flex(column, $justify: flex-start, $gap: 1em,$wrap: nowrap);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    height: 100dvh; // For mobile phones
+    width: $width;
+    padding-bottom: 2em;
+    background-color: $secondary-monyellow;
+    // box-shadow: 2px 0 7px color.adjust($color: #777, $alpha: 0.05);
+    overflow-y: scroll;
+    transform: translateX(-100%);
+    opacity: 0;
+
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+.sidebar-header {
+    @include flex($justify: space-between);
+    width: 100%;
+    padding-right: 2rem;
+    height: $nav-height-mobile;
+
+    @include responsive(tablet) {
+        height: $nav-height-tablet;
+    }
+}
+.sidenav {
+    @include flex(column, $align: first baseline);
+    width: 100%;
+    .nav-link {
+        display: block;
+        padding: 1em;
+        width: 100%;
+    }
+}
+.sidebar-backlayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    height: 100dvh; // For mobile phones
+    z-index: 99;
+    width: 100%;
+    background-color: color.adjust($color: #222, $alpha: 0.3);
+    opacity: 0.5;
+}

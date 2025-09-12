@@ -10,6 +10,7 @@ $neutral100: #00171F;
 $primary-darkblue: #003459;
 $primary-darkblue80: #002A48;
 
+$secondary-monyellow: #F7DBA7;
 $secondary-monyellow40: #FCEED5;
 $secondary-monyellow60: #F1D092;
 
@@ -24,6 +25,12 @@ $base-font-size: 16px;
 $side-margins-phone: 16px;
 $side-margins-tablet: 40px;
 $side-margins-desktop: min(10vw, 130px);
+
+$nav-height-mobile: 3.5625em; // em(57px);
+$nav-height-tablet: 4.75em; // em(76px);
+$nav-height-desktop: 6.25em; // em(100px);
+
+// ENSURE TO CHANGE THE 'js/utils/css-constants.js' FILE IF CHANGING THESE
 
 $breakpoints-map: (
     tablet:768px,
