@@ -1056,7 +1056,24 @@ hero section since it has class section.
   background-image: url("../../assets/backgrounds/mobile-banner-3.svg");
   background-size: cover;
   border-radius: 20px;
-  padding: 2rem 1.3125rem 0 1.3125rem;
+  padding: 0 1.3125rem;
+}
+.banner-section .column:nth-child(1) {
+  padding: 2rem 0;
+}
+@media (min-width: 1024px) {
+  .banner-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0;
+    grid-auto-flow: row;
+    align-items: stretch;
+  }
+  .banner-section .column:nth-child(2) img {
+    height: 100%;
+    align-self: end;
+  }
 }
 
 .banner-heading {
@@ -1091,12 +1108,7 @@ hero section since it has class section.
   font-weight: 500;
   line-height: 1.5;
   margin-bottom: 2rem;
-}
-
-@media (min-width: 1024px) {
-  .adoption-banner.hide-on-mobile {
-    display: block;
-  }
+  max-width: 28.125em;
 }
 
 @media (min-width: 1024px) {

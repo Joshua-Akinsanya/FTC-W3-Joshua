@@ -6,7 +6,20 @@
     background-image: url('../../assets/backgrounds/mobile-banner-3.svg');
     background-size: cover;
     border-radius: 20px;
-    padding: rem(32px) rem(21px) 0 rem(21px);
+    padding: 0 rem(21px);
+    // Move padding top of 32px to column to give image full height
+    
+    .column:nth-child(1) {
+        padding: rem(32px) 0;
+    }
+    @include responsive(desktop) {
+        @include grid(1fr 1fr);
+
+        .column:nth-child(2) img {
+            height: 100%;
+            align-self: end
+        }
+    }
 }
 .banner-heading {
     @include typography($primary-darkblue80, rem(36px), 800, calc(54/36));
@@ -25,10 +38,5 @@
 .banner-sub-text {
     @include typography($neutral80, rem(12px), 500, calc(18 / 12));
     margin-bottom: rem(32px);
-}
-
-.adoption-banner.hide-on-mobile {
-    @include responsive(desktop) {
-        display: block;
-    }
+    max-width: em(450px);
 }
