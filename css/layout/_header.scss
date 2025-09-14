@@ -17,7 +17,7 @@ $site-sub-text-px: 12px;
 .site-heading {
     font-weight: 800;
     @include typography($primary-darkblue80, rem($site-heading-px), 800, 1.3);
-    margin-top: em(35px);
+    margin-top: 0;
 
     @include responsive(desktop) {
         @include typography($primary-darkblue80, rem(60px), 800, calc(68 / 60))
@@ -43,6 +43,10 @@ $site-sub-text-px: 12px;
 }
 
 .hero-section {
+    // remove margin applied by class section
+    // use padding instead to give room to background
+    margin-top: 0;
+    padding-top: rem(60px);
     padding-inline: $side-margins-phone;
     @include responsive(tablet) {
         padding-inline: $side-margins-tablet;
@@ -51,9 +55,6 @@ $site-sub-text-px: 12px;
         padding-inline: $side-margins-desktop;
         @include grid(1fr 1fr);
 
-        .site-heading {
-            margin-top: 0
-        }
         .column:first-of-type {
             padding-bottom: rem(60px);
         }
@@ -64,7 +65,8 @@ $site-sub-text-px: 12px;
     // Inherits margin from section class in _section.scss
 }
 
-.column img {
-    margin-top: auto;
+.hero-with-background {
+    background: linear-gradient(102.87deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%);
 }
+
 // Container for buttons in hero section - see _button.scss
