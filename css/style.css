@@ -297,6 +297,9 @@ btn-styles, .neutral-button, .secondary-link-button, .primary-link-button {
 
 .card-img {
   width: 100%;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
 }
 
