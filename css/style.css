@@ -158,12 +158,13 @@ btn-styles, .neutral-button, .secondary-link-button, .primary-link-button {
 
 .button-container {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  flex: 1;
+  width: 100%;
+  max-width: 21.875rem;
 }
 
 @media (min-width: 1024px) {
@@ -849,12 +850,24 @@ hero section since it has class section.
 }
 
 .site-heading {
+  max-width: 9.7826086957em;
+}
+
+.site-sub-heading {
+  max-width: 16.0714285714em;
+}
+
+.site-sub-text {
+  max-width: 28.125em;
+}
+
+.site-heading {
   font-weight: 800;
   color: #002A48;
   font-size: 2.875rem;
   font-weight: 800;
   line-height: 1.3;
-  margin-top: 2.1875rem;
+  margin-top: 2.1875em;
 }
 @media (min-width: 1024px) {
   .site-heading {
@@ -870,7 +883,7 @@ hero section since it has class section.
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.3;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.75em;
 }
 @media (min-width: 1024px) {
   .site-sub-heading {
@@ -891,7 +904,7 @@ hero section since it has class section.
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 1.5;
-  margin-bottom: 2rem;
+  margin-bottom: 2em;
 }
 @media (min-width: 1024px) {
   .site-sub-text {
@@ -910,7 +923,26 @@ hero section since it has class section.
 @media (min-width: 1024px) {
   .hero-section {
     padding-inline: min(10vw, 130px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0;
+    grid-auto-flow: row;
+    align-items: stretch;
   }
+  .hero-section .site-heading {
+    margin-top: 0;
+  }
+  .hero-section .column:first-of-type {
+    padding-bottom: 3.75rem;
+  }
+  .hero-section .column:nth-child(2) {
+    align-self: end;
+  }
+}
+
+.column img {
+  margin-top: auto;
 }
 
 .site-bar {
